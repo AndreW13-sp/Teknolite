@@ -220,6 +220,52 @@
             </div>
         </section>
 
+        <section class="py-16 px-24">
+            <div class="relative text-center pb-4">
+                <h3 class="z-10 relative text-2xl md:text-4xl text-black">OUR CLIENTS</h3>
+                <div class="mx-auto mt-2 w-16 h-1 bg-black"></div>
+            </div>
+            <div class="scrolling-wrapper" id="scrolling-wrapper">
+                <div class="scroll" id="scroll-container">
+                    <div class="logo-container"><img src="imgs/logos/1.png" alt="Client 1"></div>
+                    <div class="logo-container"><img src="imgs/logos/2.png" alt="Client 2"></div>
+                    <div class="logo-container"><img src="imgs/logos/3.png" alt="Client 3"></div>
+                    <div class="logo-container"><img src="imgs/logos/4.png" alt="Client 4"></div>
+                    <div class="logo-container"><img src="imgs/logos/5.png" alt="Client 5"></div>
+                    <div class="logo-container"><img src="imgs/logos/1.png" alt="Client 1"></div>
+                    <div class="logo-container"><img src="imgs/logos/2.png" alt="Client 2"></div>
+                    <div class="logo-container"><img src="imgs/logos/3.png" alt="Client 3"></div>
+                    <div class="logo-container"><img src="imgs/logos/4.png" alt="Client 4"></div>
+                    <div class="logo-container"><img src="imgs/logos/5.png" alt="Client 5"></div>
+                    <div class="logo-container"><img src="imgs/logos/1.png" alt="Client 1"></div>
+                    <div class="logo-container"><img src="imgs/logos/2.png" alt="Client 2"></div>
+                    <div class="logo-container"><img src="imgs/logos/3.png" alt="Client 3"></div>
+                    <div class="logo-container"><img src="imgs/logos/4.png" alt="Client 4"></div>
+                    <div class="logo-container"><img src="imgs/logos/5.png" alt="Client 5"></div>
+                </div>
+            </div>
+        </section>
+        <script>
+            let scrollContainer = document.getElementById('scroll-container');
+                let scrollWidth = scrollContainer.scrollWidth / 2; 
+
+                function scrollLogos() {
+                    scrollContainer.scrollLeft += 1;
+
+                    if (scrollContainer.scrollLeft >= scrollWidth) {
+                        scrollContainer.scrollLeft = 0;
+                    }
+
+                    requestAnimationFrame(scrollLogos);
+                }
+
+                scrollLogos();
+
+
+        </script>
+
+
+
         <footer id="contact" class="relative p-2 bg-black lg:p-8">
             <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('./imgs/footer.jpg');"></div>
             <div class="absolute inset-0 bg-black bg-opacity-30"></div>
