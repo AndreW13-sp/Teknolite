@@ -60,7 +60,20 @@
         opacity: 1;
     }
 }
+.count-animation {
+            animation: count 2s ease-in-out;
+        }
 
+        @keyframes count {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 .slide-in-left {
     transform: translateX(-100%);
     animation: slideInLeft 1s forwards;
