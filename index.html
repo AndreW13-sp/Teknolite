@@ -83,28 +83,16 @@
                         data-src="./imgs/banner1.png">
                 </div>
                 <div class="swiper-slide w-full relative">
-                    <img src="./imgs/banner2.png" alt="Image" class="w-full h-auto object-cover blur-load"
-                        data-src="./imgs/banner2.png">
-                </div>
-                <div class="swiper-slide w-full relative">
                     <img src="./imgs/banner3.png" alt="Image" class="w-full h-auto object-cover blur-load"
                         data-src="./imgs/banner3.png">
-                </div>
-                <div class="swiper-slide w-full relative">
-                    <img src="./imgs/banner4.png" alt="Image" class="w-full h-auto object-cover blur-load"
-                        data-src="./imgs/banner4.png">
                 </div>
             </div>
         
             <div class="swiper-pagination"></div>
-            <div class="absolute bottom-0 left-0 right-0 flex justify-center p-4">
-                <div class="bullet w-3 h-3 bg-[#000000] rounded-full mx-1 cursor-pointer hover:bg-[#ffffff]" data-index="0">
+            <div class="absolute bottom-0 left-0 right-0 flex justify-center p-4" style="margin-bottom: 50px;">
+                <div class="bullet w-3 h-3 bg-[#757575] rounded-full mx-1 cursor-pointer hover:bg-[#ffffff]" data-index="0">
                 </div>
-                <div class="bullet w-3 h-3 bg-[#000000] rounded-full mx-1 cursor-pointer hover:bg-[#ffffff]" data-index="1">
-                </div>
-                <div class="bullet w-3 h-3 bg-[#000000] rounded-full mx-1 cursor-pointer hover:bg-[#ffffff]" data-index="2">
-                </div>
-                <div class="bullet w-3 h-3 bg-[#000000] rounded-full mx-1 cursor-pointer hover:bg-[#ffffff]" data-index="3">
+                <div class="bullet w-3 h-3 bg-[#757575] rounded-full mx-1 cursor-pointer hover:bg-[#ffffff]" data-index="1">
                 </div>
             </div>
         
@@ -116,12 +104,12 @@
                 function showSlide(n) {
                     for (let i = 0; i < slides.length; i++) {
                         slides[i].classList.add('hidden');
-                        bullets[i].classList.remove('bg-[#000000]');
+                        bullets[i].classList.remove('bg-[#757575]');
                         bullets[i].classList.add('bg-[#ffffff]');
                     }
                     slides[n].classList.remove('hidden');
                     bullets[n].classList.remove('bg-[#ffffff]');
-                    bullets[n].classList.add('bg-[#000000]');
+                    bullets[n].classList.add('bg-[#757575]');
                     slideIndex = n;
                 }
 
@@ -135,6 +123,8 @@
                 showSlide(slideIndex); 
             </script>
         </section>
+
+
 
         <section id="about" class="flex flex-col md:flex-row items-center justify-between py-24 px-8 md:px-16 bg-white">
             <div class="md:w-1/2 mb-8 md:mb-0">
@@ -426,9 +416,9 @@
                     </div>
                     <div class="w-full lg:w-1/2 px-3 text-white lg:pl-24 flex flex-col items-center lg:items-start">
                         <div class="mb-4 text-center lg:text-left">
-                            <p class="mb-1 text-md md:text-xl"><span class="text-white font-bold">Address:</span> Your address here</p>
-                            <p class="mb-1 text-md md:text-xl"><span class="text-white font-bold">Email:</span> contact@example.com</p>
-                            <p class="text-md md:text-xl"><span class="text-white font-bold">Phone:</span> +1 234 567 8900</p>
+                            <p class="mb-1 text-md md:text-xl"><span class="text-white font-bold">Address:</span> 16 WAMAN PATIL INDUSTRIAL ESTATE , CHEMBUR, 400088.</p>
+                            <p class="mb-1 text-md md:text-xl"><span class="text-white font-bold">Email:</span> sales@teknolite.in</p>
+                            <p class="text-md md:text-xl"><span class="text-white font-bold">Phone:</span> 9873436176</p>
                         </div>
                         <div class="flex justify-center lg:justify-start mt-4 text-xl">
                             <a href="https://www.instagram.com" class="mr-6">
