@@ -1,6 +1,10 @@
 .hidden-nav {
     display: none;
 }
+.hidden {
+    display: none;
+}
+
 .slide-in-top {
     animation: slide-in-top 0.5s ease-out forwards;
 }
@@ -141,6 +145,13 @@
 
 
 
+#projects .img-container img {
+    transition: transform 0.3s ease;
+}
+
+#projects .img-container:hover img {
+    transform: scale(1.05); /* Increase the size on hover */
+}
 
 
 

@@ -37,8 +37,7 @@
                     <li><a href="#contact" class="nav-link block text-white font-bold text-xl p-4">CONTACT US</a></li>
                 </ul>
             </div>
-        </nav>
-        
+        </nav>  
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const toggleIcon = document.getElementById("toggleIcon");
@@ -137,14 +136,14 @@
             </script>
         </section>
 
-        <section id="about" class="flex flex-col md:flex-row items-center justify-between py-16 px-8 md:px-16 bg-white">
+        <section id="about" class="flex flex-col md:flex-row items-center justify-between py-24 px-8 md:px-16 bg-white">
             <div class="md:w-1/2 mb-8 md:mb-0">
                 <div class="relative pb-4">
                     <h3 class="z-10 relative text-2xl text-gray-400">About Us</h3>
-                    <div class="absolute bottom-0 left-0 w-16 h-1 bg-black"></div>
+                    <div class="absolute bottom-0 left-0 w-16 h-1 bg-[#05318e]"></div>
                 </div>
                 <h2 class="text-3xl font-bold text-black mb-4 pt-6">A Class of it's own</h2>
-                <p class="text-gray-700 mb-4">
+                <p class="text-gray-700 mb-4 mr-2">
                     Teknolite stands out as a leading expert in indoor and outdoor IP-rated luminaries. With in-house manufacturing
                     facilities and a stringent quality assurance process involving multiple checks, we ensure the highest quality standards
                     in every luminary we produce. Our expertise extends to various commercial and government projects, where our unique
@@ -172,7 +171,7 @@
         </section>
 
         <section id="services" class="container mx-auto my-8">
-            <div class="text-black text-left m-8">
+            <div class="text-black text-left m-4">
                 <h2 class="text-xl md:text-2xl font-bold">INDOOR LIGHTINGS</h2>
                 <a href="indoor.html" class="text-lg mt-2 inline-block">&rarr;</a>
             </div>
@@ -258,7 +257,7 @@
         <section id="clients" class="py-16 px-4 md:px-24">
             <div class="relative text-center pb-4">
                 <h3 class="z-10 relative text-2xl md:text-4xl text-black">OUR CLIENTS</h3>
-                <div class="mx-auto mt-2 w-16 h-1 bg-black"></div>
+                <div class="mx-auto mt-2 w-16 h-1 bg-[#05318e]"></div>
             </div>
             <div class="overflow-x-auto scrolling-wrapper">
                 <div class="flex flex-nowrap" id="scroll-container">
@@ -284,6 +283,115 @@
                 }, 10); // Adjust this value to make the scroll smoother
             }
         </script>
+
+        <section id="projects" class="px-4 py-12">
+            <div class="relative text-center pb-4">
+                <h3 class="z-10 relative text-2xl md:text-4xl text-black">OUR PROJECTS</h3>
+                <div class="mx-auto mt-2 w-16 h-1 bg-[#05318e]"></div>
+            </div>
+            <div class="flex flex-wrap justify-center p-8">
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 img-container">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <img src="imgs/banner1.png" alt="Hyaat" class="w-full h-auto cursor-pointer">
+                        <div class="p-4">
+                            <h3 class="text-xl text-center font-semibold mb-2">Grand Hyatt Mumbai</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 img-container">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <img src="imgs/banner2.png" alt="Hirandani City" class="w-full h-auto cursor-pointer">
+                        <div class="p-4">
+                            <h3 class="text-xl text-center font-semibold mb-2">Hirandani City</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 img-container">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <img src="imgs/banner3.png" alt="Hometown" class="w-full h-auto cursor-pointer">
+                        <div class="p-4">
+                            <h3 class="text-xl text-center font-semibold mb-2">Hometown</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 img-container">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <img src="imgs/banner4.png" alt="Radisson Blu Karjat" class="w-full h-auto cursor-pointer">
+                        <div class="p-4">
+                            <h3 class="text-xl text-center font-semibold mb-2">Radisson Blu Karjat</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modals -->
+        <div id="modal1" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+            <div class="modal-content bg-white overflow-hidden rounded-lg max-w-3xl max-h-3/4 relative">
+                <!-- <span class="close absolute top-0 right-0 px-4 py-2 cursor-pointer text-xl text-white z-10">&times;</span> -->
+                <img id="modal-image1" src="" alt="Modal Image" class="w-full h-auto">
+            </div>
+        </div>
+        
+        <div id="modal2" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+            <div class="modal-content bg-white overflow-hidden rounded-lg max-w-3xl max-h-3/4 relative">
+                <!-- <span class="close absolute top-0 right-0 px-4 py-2 cursor-pointer text-xl text-white z-10">&times;</span> -->
+                <img id="modal-image2" src="" alt="Modal Image" class="w-full h-auto">
+            </div>
+        </div>
+        
+        <div id="modal3" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+            <div class="modal-content bg-white overflow-hidden rounded-lg max-w-3xl max-h-3/4 relative">
+                <!-- <span class="close absolute top-0 right-0 px-4 py-2 cursor-pointer text-xl text-white z-10">&times;</span> -->
+                <img id="modal-image3" src="" alt="Modal Image" class="w-full h-auto">
+            </div>
+        </div>
+        
+        <div id="modal4" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+            <div class="modal-content bg-white overflow-hidden rounded-lg max-w-3xl max-h-3/4 relative">
+                <!-- <span class="close absolute top-0 right-0 px-4 py-2 cursor-pointer text-xl text-white z-10">&times;</span> -->
+                <img id="modal-image4" src="" alt="Modal Image" class="w-full h-auto">
+            </div>
+        </div>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var modals = [
+                    document.getElementById('modal1'),
+                    document.getElementById('modal2'),
+                    document.getElementById('modal3'),
+                    document.getElementById('modal4')
+                ];
+
+                var images = document.querySelectorAll('.img-container img');
+                var modalImages = [
+                    document.getElementById("modal-image1"),
+                    document.getElementById("modal-image2"),
+                    document.getElementById("modal-image3"),
+                    document.getElementById("modal-image4")
+                ];
+
+                var closeButtons = document.querySelectorAll(".close");
+
+                images.forEach((image, index) => {
+                    image.addEventListener('click', function () {
+                        console.log('Image clicked: ' + index);
+                        modals[index].classList.remove("hidden");
+                        modalImages[index].src = this.src;
+                    });
+                });
+
+                window.onclick = function (event) {
+                    modals.forEach((modal, index) => {
+                        if (event.target === modal) {
+                            console.log('Window clicked outside modal: ' + index);
+                            modal.classList.add("hidden");
+                        }
+                    });
+                };
+            });
+        </script>
+
 
         <footer id="contact" class="relative p-2 bg-black lg:p-8">
             <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('./imgs/footer.jpg');"></div>
