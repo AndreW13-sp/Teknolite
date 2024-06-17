@@ -11,6 +11,40 @@
 </head>
 
 <body class="bg-white">
+    <div class="preload z-100" id="spinnerPreloader">
+        <div class="circle"></div>
+        <p class="text">Teknolite</p>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var images = [];
+
+            function preloadImages(urls) {
+                urls.forEach(function (url) {
+                    var img = new Image();
+                    img.src = url;
+                    images.push(img);
+                    img.onload = imageLoaded;
+                });
+            }
+
+            function imageLoaded() {
+                if (images.every(function (img) { return img.complete; })) {
+                    document.getElementById('spinnerPreloader').classList.add('loaded');
+
+                    setTimeout(function () {
+                        document.getElementById('spinnerPreloader').classList.add('hidden');
+                        document.getElementById('content').classList.remove('hidden');
+                        document.body.classList.remove('overflow-hidden');
+                    }, 250);
+                }
+            }
+
+            var imageUrls = ['.imgs/products/Outdoor'];
+            preloadImages(imageUrls);
+        });
+    </script>
     <nav class="z-50 bg-black fixed top-0 left-0 right-0">
         <div class="container mx-auto px-4 lg:pr-0 flex justify-between items-center">
             <a href="index.html">
