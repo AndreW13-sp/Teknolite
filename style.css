@@ -91,7 +91,6 @@ body.overflow-hidden {
         background-position: 0%;
     }
 }
-
 .slide-in-top {
     animation: slide-in-top 0.5s ease-out forwards;
 }
