@@ -69,7 +69,6 @@
                         <li><a href="outdoor.html" class="block pl-4 md:pl-0">OUTDOORS</a></li>
                     </ul>
                 </li>
-                <li><a href="#projects" class="nav-link block text-white font-bold text-xl p-4">PROJECTS</a></li>
                 <li><a href="#contact" class="nav-link block text-white font-bold text-xl p-4">CONTACT US</a></li>
             </ul>
         </div>
@@ -83,24 +82,18 @@
             const toggleNavBtn = document.getElementById('toggleNavBtn');
             const navLinks = document.getElementById('navLinks');
             const submenus = document.querySelectorAll('.relative');
-
             let open = false;
-
             toggleNavBtn.addEventListener('click', function () {
                 navLinks.classList.toggle('hidden');
                 open = !open;
                 hamburgerPath.classList.toggle('hidden', open);
                 closePath.classList.toggle('hidden', !open);
             });
-
-            // Toggle submenus
             submenus.forEach(submenu => {
                 submenu.addEventListener('click', function (event) {
                     event.stopPropagation(); // Prevent parent link click
                     const submenuList = this.querySelector('ul');
                     submenuList.classList.toggle('hidden');
-
-                    // Add margin-bottom when submenu is visible and screen width is less than 768px (md)
                     if (window.innerWidth < 1024) {
                         if (!submenuList.classList.contains('hidden')) {
                             submenu.style.marginBottom = submenuList.offsetHeight + 'px';
