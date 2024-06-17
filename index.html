@@ -7,39 +7,47 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="preload" as="image" href="./imgs/banner1.png">
+        <link rel="preload" as="image" href="./imgs/banner2.png">
+        <link rel="preload" as="image" href="./imgs/banner3.png">
+        <link rel="preload" as="image" href="./imgs/banner4.png">
     </head>
     <body class="bg-white">
-        <!-- Initial Spinner Preloader -->
-        <div id="spinnerPreloader" class="fixed inset-0 z-60 flex items-center justify-center bg-white">
-            <div class="flex flex-col items-center">
-                <div class="animate-spin rounded-full h-32 w-32 border-t-4 border-blue-500"></div>
-                <p class="mt-4 text-blue-500 text-lg font-semibold">Loading...</p>
-            </div>
-        </div>
-        
-        <!-- Sliding Colors Preloader -->
-        <div id="colorPreloader" class="fixed inset-0 z-50 flex items-center justify-center bg-white hidden">
-            <div class="relative w-full h-full">
-                <div class="absolute inset-0 bg-[#05318e] slide-left"></div>
-                <div class="absolute inset-0 bg-[#05318e] slide-top"></div>
-                <div class="absolute inset-0 bg-black slide-right"></div>
-            </div>
+        <div class="preload" id="spinnerPreloader">
+            <div class="circle"></div>
+            <p class="text">Teknolite</p>
         </div>
 
         <script>
-            window.onload = function () {
-                // Hide spinner preloader and show color preloader
-                document.getElementById('spinnerPreloader').classList.add('hidden');
-                document.getElementById('colorPreloader').classList.remove('hidden');
+            document.addEventListener('DOMContentLoaded', function () {
+                var images = [];
 
-                // Wait for color preloader animation to finish
-                setTimeout(function () {
-                    document.getElementById('colorPreloader').classList.add('hidden');
-                    document.getElementById('content').classList.remove('hidden');
-                    document.body.classList.remove('overflow-hidden');
-                }, 3000); // Duration for the color preloader
-            };
+                function preloadImages(urls) {
+                    urls.forEach(function (url) {
+                        var img = new Image();
+                        img.src = url;
+                        images.push(img);
+                        img.onload = imageLoaded;
+                    });
+                }
+
+                function imageLoaded() {
+                    if (images.every(function (img) { return img.complete; })) {
+                        document.getElementById('spinnerPreloader').classList.add('loaded');
+
+                        setTimeout(function () {
+                            document.getElementById('spinnerPreloader').classList.add('hidden');
+                            document.getElementById('content').classList.remove('hidden');
+                            document.body.classList.remove('overflow-hidden');
+                        }, 250);
+                    }
+                }
+
+                var imageUrls = ['./imgs/banner1.png', './imgs/banner2.png', './imgs/banner3.png', './imgs/banner4.png'];
+                preloadImages(imageUrls);
+            });
         </script>
+
 
         <nav class="z-50 bg-black fixed top-0 left-0 right-0">
             <div class="container mx-auto px-4 lg:pr-0 flex justify-between items-center">
@@ -72,41 +80,12 @@
         </nav>
  
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const toggleIcon = document.getElementById("toggleIcon");
-                const hamburgerPath = toggleIcon.querySelector('.hamburger');
-                const closePath = toggleIcon.querySelector('.close');
-                const toggleNavBtn = document.getElementById('toggleNavBtn');
-                const navLinks = document.getElementById('navLinks');
-                const submenus = document.querySelectorAll('.relative');
+            const preloader = document.querySelector("[data-preaload]");
 
-                let open = false;
-
-                toggleNavBtn.addEventListener('click', function () {
-                    navLinks.classList.toggle('hidden');
-                    open = !open;
-                    hamburgerPath.classList.toggle('hidden', open);
-                    closePath.classList.toggle('hidden', !open);
+                window.addEventListener("load", function () {
+                    preloader.classList.add("loaded");
+                    document.body.classList.add("loaded");
                 });
-
-                // Toggle submenus
-                submenus.forEach(submenu => {
-                    submenu.addEventListener('click', function (event) {
-                        event.stopPropagation(); // Prevent parent link click
-                        const submenuList = this.querySelector('ul');
-                        submenuList.classList.toggle('hidden');
-
-                        // Add margin-bottom when submenu is visible and screen width is less than 768px (md)
-                        if (window.innerWidth < 1024) {
-                            if (!submenuList.classList.contains('hidden')) {
-                                submenu.style.marginBottom = submenuList.offsetHeight + 'px';
-                            } else {
-                                submenu.style.marginBottom = '0px';
-                            }
-                        }
-                    });
-                });
-            });
         </script>
 
         <section id="home" class="relative pt-12 flex justify-center items-center w-full max-h-screen">

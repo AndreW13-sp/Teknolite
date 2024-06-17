@@ -4,40 +4,93 @@
 .hidden {
     display: none;
 }
-#Preloader 
-.animate-spin {
-    @apply animate-spin;
+:root {
+    --transition-1: 0.5s ease;
+    --transition-2: 0.3s ease;
+    --radius-circle: 50%;
+    --white: #ffffff;
+    --smoky-black-3: #0a0a0a;
+    --loading-text-gradient: linear-gradient(90deg, #f3ec78, #af4261);
+    --weight-bold: 700;
 }
-@keyframes slide-left {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(0); }
-        }
 
-        @keyframes slide-top {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(0); }
-        }
+body.overflow-hidden {
+    overflow: hidden;
+}
 
-        @keyframes slide-right {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(0); }
-        }
+.hidden {
+    display: none;
+}
 
-        .slide-left {
-            animation: slide-left 1s ease forwards;
-        }
+.preload {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f6f4e7;
+    z-index: 10;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    transition: transform var(--transition-2);
+}
 
-        .slide-top {
-            animation: slide-top 1s 1s ease forwards;
-        }
+.preload > * {
+    transition: opacity var(--transition-1);
+}
 
-        .slide-right {
-            animation: slide-right 1s 2s ease forwards;
-        }
+.preload.loaded {
+    transform: translateY(-100%);
+}
 
-        .hidden {
-            display: none;
-        }
+.preload.loaded > * {
+    opacity: 0;
+}
+
+.circle {
+    width: 112px;
+    height: 112px;
+    border-radius: var(--radius-circle);
+    border: 3px solid var(--white);
+    border-block-start-color: var(--smoky-black-3);
+    margin-block-end: 45px;
+    animation: rotate360 1s linear infinite;
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.preload .text {
+    background-image: var(--loading-text-gradient);
+    background-size: 500%;
+    font-size: calc(1rem + 3vw); /* Adjust font size responsively */
+    font-weight: var(--weight-bold);
+    line-height: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.5vw; /* Adjust letter spacing responsively */
+    padding-inline-start: 16px;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0.5px #4f2f39;
+    animation: loadingText linear 2s infinite;
+}
+
+@keyframes loadingText {
+    0% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
 
 .slide-in-top {
     animation: slide-in-top 0.5s ease-out forwards;
