@@ -3,12 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tzani</title>
+        <title>Teknolite</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css" rel="stylesheet">
     </head>
     <body class="bg-white">
+        <!-- Initial Spinner Preloader -->
         <div id="spinnerPreloader" class="fixed inset-0 z-60 flex items-center justify-center bg-white">
             <div class="flex flex-col items-center">
                 <div class="animate-spin rounded-full h-32 w-32 border-t-4 border-blue-500"></div>
@@ -16,6 +17,7 @@
             </div>
         </div>
         
+        <!-- Sliding Colors Preloader -->
         <div id="colorPreloader" class="fixed inset-0 z-50 flex items-center justify-center bg-white hidden">
             <div class="relative w-full h-full">
                 <div class="absolute inset-0 bg-[#05318e] slide-left"></div>
@@ -25,18 +27,18 @@
         </div>
 
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                setTimeout(function () {
-                    document.getElementById('spinnerPreloader').classList.add('hidden');
-                    document.getElementById('colorPreloader').classList.remove('hidden');
+            window.onload = function () {
+                // Hide spinner preloader and show color preloader
+                document.getElementById('spinnerPreloader').classList.add('hidden');
+                document.getElementById('colorPreloader').classList.remove('hidden');
 
-                    setTimeout(function () {
-                        document.getElementById('colorPreloader').classList.add('hidden');
-                        document.getElementById('content').classList.remove('hidden');
-                        document.body.classList.remove('overflow-hidden');
-                    }, 3000); 
-                }, 3000);
-            });
+                // Wait for color preloader animation to finish
+                setTimeout(function () {
+                    document.getElementById('colorPreloader').classList.add('hidden');
+                    document.getElementById('content').classList.remove('hidden');
+                    document.body.classList.remove('overflow-hidden');
+                }, 3000); // Duration for the color preloader
+            };
         </script>
 
         <nav class="z-50 bg-black fixed top-0 left-0 right-0">
