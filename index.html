@@ -9,6 +9,36 @@
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css" rel="stylesheet">
     </head>
     <body class="bg-white">
+        <div id="spinnerPreloader" class="fixed inset-0 z-60 flex items-center justify-center bg-white">
+            <div class="flex flex-col items-center">
+                <div class="animate-spin rounded-full h-32 w-32 border-t-4 border-blue-500"></div>
+                <p class="mt-4 text-blue-500 text-lg font-semibold">Loading...</p>
+            </div>
+        </div>
+        
+        <div id="colorPreloader" class="fixed inset-0 z-50 flex items-center justify-center bg-white hidden">
+            <div class="relative w-full h-full">
+                <div class="absolute inset-0 bg-[#05318e] slide-left"></div>
+                <div class="absolute inset-0 bg-[#05318e] slide-top"></div>
+                <div class="absolute inset-0 bg-black slide-right"></div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                setTimeout(function () {
+                    document.getElementById('spinnerPreloader').classList.add('hidden');
+                    document.getElementById('colorPreloader').classList.remove('hidden');
+
+                    setTimeout(function () {
+                        document.getElementById('colorPreloader').classList.add('hidden');
+                        document.getElementById('content').classList.remove('hidden');
+                        document.body.classList.remove('overflow-hidden');
+                    }, 3000); 
+                }, 3000);
+            });
+        </script>
+
         <nav class="z-50 bg-black fixed top-0 left-0 right-0">
             <div class="container mx-auto px-4 lg:pr-0 flex justify-between items-center">
                 <a href="index.html">
@@ -37,7 +67,8 @@
                     <li><a href="#contact" class="nav-link block text-white font-bold text-xl p-4">CONTACT US</a></li>
                 </ul>
             </div>
-        </nav>  
+        </nav>
+ 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const toggleIcon = document.getElementById("toggleIcon");
