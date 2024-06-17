@@ -10,7 +10,7 @@
     --radius-circle: 50%;
     --white: #ffffff;
     --smoky-black-3: #0a0a0a;
-    --loading-text-gradient: linear-gradient(90deg, #f3ec78, #af4261);
+    --loading-text-gradient: linear-gradient(90deg, var(--white), var(--smoky-black-3));
     --weight-bold: 700;
 }
 
@@ -79,7 +79,7 @@ body.overflow-hidden {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-stroke: 0.5px #4f2f39;
+    -webkit-text-stroke: 0.5px var(--smoky-black-3); /* Stroke color adjusted to smoky black */
     animation: loadingText linear 2s infinite;
 }
 
