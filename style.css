@@ -29,7 +29,7 @@ body.overflow-hidden {
     right: 0;
     bottom: 0;
     background-color: #f6f4e7;
-    z-index: 10;
+    z-index: 1000; /* Ensure this is higher than other elements */
     display: grid;
     place-content: center;
     justify-items: center;
@@ -91,6 +91,7 @@ body.overflow-hidden {
         background-position: 0%;
     }
 }
+
 .slide-in-top {
     animation: slide-in-top 0.5s ease-out forwards;
 }
