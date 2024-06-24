@@ -91,6 +91,35 @@ body.overflow-hidden {
         background-position: 0%;
     }
 }
+#about-logo {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fade-in 2s ease-in-out;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#about-logo {
+    animation: fade-in 2s forwards;
+}
+
+.font-cinzel {
+    font-family: 'Cinzel', serif;
+}
 
 .slide-in-top {
     animation: slide-in-top 0.5s ease-out forwards;

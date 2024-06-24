@@ -13,6 +13,7 @@
         <link rel="preload" as="image" href="./imgs/banner2.png">
         <link rel="preload" as="image" href="./imgs/banner3.png">
         <link rel="preload" as="image" href="./imgs/banner4.png">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body class="bg-white">
         <div class="preload z-100" id="spinnerPreloader">
@@ -114,13 +115,21 @@
         </script>
 
         <section id="home" class="relative pt-12 flex justify-center items-center w-full max-h-screen">
-            <div id="carousel" class="flex overflow-x-hidden w-full">
+            <div id="carousel" class="flex overflow-x-hidden w-full relative">
                 <div class="swiper-slide w-full relative">
+                    <h1
+                        class="absolute inset-0 flex items-center justify-center text-center text-white text-xs sm:text-2xl md:text-4xl xl:text-5xl font-bold animate-fade-in font-cinzel">
+                        ILLUMINATING YOUR STAY WITH TEKNOLITE EXCELLENCE
+                    </h1>
                     <img src="./imgs/banner1.png" alt="Image" class="w-full h-auto object-cover blur-load"
                         data-src="./imgs/banner1.png">
                 </div>
                 <div class="swiper-slide w-full relative">
-                    <img src="./imgs/banner3.png" alt="Image" class="w-full h-auto object-cover blur-load"
+                    <h1
+                        class="absolute inset-0 flex items-center justify-center text-center text-white text-xs sm:text-2xl md:text-4xl xl:text-5xl font-bold animate-fade-in font-cinzel">
+                        LIGHTING UP LUXURY WITH TEKNOLITE
+                    </h1>
+                    <img src="./imgs/banner4.png" alt="Image" class="w-full h-auto object-cover blur-load"
                         data-src="./imgs/banner3.png">
                 </div>
             </div>
@@ -167,15 +176,17 @@
                     <h3 class="z-10 relative text-2xl text-gray-400">About Us</h3>
                     <div class="absolute bottom-0 left-0 w-16 h-1 bg-[#05318e]"></div>
                 </div>
-                <h2 class="text-3xl font-bold text-black mb-4 pt-6">A Class of it's own</h2>
+                <h2 class="text-3xl font-bold text-black mb-4 pt-6">A Class of its own</h2>
                 <p class="text-gray-700 mb-4 mr-2">
                     Teknolite stands out as a leading expert in indoor and outdoor IP-rated luminaries. With in-house manufacturing
-                    facilities and a stringent quality assurance process involving multiple checks, we ensure the highest quality standards
-                    in every luminary we produce. Our expertise extends to various commercial and government projects, where our unique
+                    facilities and a stringent quality assurance process involving multiple checks, we ensure the highest quality
+                    standards
+                    in every luminary we produce. Our expertise extends to various commercial and government projects, where our
+                    unique
                     architectural lighting solutions enhance spaces with unparalleled brilliance.
                 </p>
                 <div class="text-6xl font-bold text-black">
-                    <span>43</span>
+                    <span id="experience-years">0</span>
                     <div class="text-lg text-gray-500">
                         <span>Year</span><br>
                         <span>Experience</span><br>
@@ -184,15 +195,43 @@
                 </div>
             </div>
             <div class="md:w-1/2 relative">
-                <img src="imgs/logo.png" alt="Design Interior Houzez" class="w-full h-full object-cover">
-                <!-- <div class="absolute inset-0 flex items-center justify-center overlay">
-                    <div class="text-center text-white p-4">
-                        <h3 class="text-2xl font-bold mb-2">DESIGN INTERIOR HOUZEZ</h3>
-                        <p class="mb-4">Proin pretium consequat est, sit amet consectetur luctus vel etiam quis...</p>
-                        <a href="#" class="text-white underline">MORE DETAIL</a>
-                    </div>
-                </div> -->
+                <img id="about-logo" src="imgs/logo.png" alt="Design Interior Houzez"
+                    class="w-full h-full object-cover opacity-0 transition-opacity duration-1000">
             </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    function animateValue(id, start, end, duration) {
+                        const obj = document.getElementById(id);
+                        let startTimestamp = null;
+                        const step = (timestamp) => {
+                            if (!startTimestamp) startTimestamp = timestamp;
+                            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                            obj.innerText = Math.floor(progress * (end - start) + start);
+                            if (progress < 1) {
+                                window.requestAnimationFrame(step);
+                            }
+                        };
+                        window.requestAnimationFrame(step);
+                    }
+
+                    function handleIntersection(entries, observer) {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                animateValue("experience-years", 0, 43, 2000);
+                                const aboutLogo = document.getElementById("about-logo");
+                                aboutLogo.style.opacity = 1;
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }
+                    const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+                    const aboutSection = document.getElementById("about");
+                    observer.observe(aboutSection);
+                });
+            </script>
+
+
+
         </section>
 
         <section id="services" class="container mx-auto my-8">
@@ -202,7 +241,8 @@
             </div>
             <div class="text-black grid md:grid-cols-4 gap-8 md:gap-12 px-8 md:px-24 md:py-8 lg:gap-16 lg:px-36 lg:py-8">
                 <div class="relative group">
-                    <img src="imgs/products/Indoor/Surface Mounted/MV_SF_Black.png" alt="New Products" class="w-full h-auto has--observer">
+                    <img src="imgs/products/Indoor/Surface Mounted/MV_SF_Black.png" alt="New Products"
+                        class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
                     <div class="mt-4">
                         <h2 class="text-2xl md:text-3xl font-bold">MV SF BLACK</h2>
                         <p class="text-lg">Surface Mounted</p>
@@ -210,7 +250,8 @@
                     </div>
                 </div>
                 <div class="relative group pb-8">
-                    <img src="imgs/products/Indoor/Surface Mounted/SFC.png" alt="Residential Projects" class="w-full h-auto has--observer">
+                    <img src="imgs/products/Indoor/Surface Mounted/SFC.png" alt="Residential Projects"
+                        class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
                     <div class="mt-4">
                         <h2 class="text-2xl md:text-3xl font-bold">SFC</h2>
                         <p class="text-lg">Surface Mounted</p>
@@ -218,7 +259,8 @@
                     </div>
                 </div>
                 <div class="relative group pb-8">
-                    <img src="imgs/products/Indoor/Downlights/RLDSQ.png" alt="Residential Projects" class="w-full h-auto has--observer">
+                    <img src="imgs/products/Indoor/Downlights/RLDSQ.png" alt="Residential Projects"
+                        class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
                     <div class="mt-4">
                         <h2 class="text-2xl md:text-3xl font-bold">RLDSQ</h2>
                         <p class="text-lg">Downlights</p>
@@ -226,7 +268,8 @@
                     </div>
                 </div>
                 <div class="relative group pb-8">
-                    <img src="imgs/products/Indoor/Wall washer/ES128.png" alt="Residential Projects" class="w-full h-auto has--observer">
+                    <img src="imgs/products/Indoor/Wall washer/ES128.png" alt="Residential Projects"
+                        class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
                     <div class="mt-4">
                         <h2 class="text-2xl md:text-3xl font-bold">ES120</h2>
                         <p class="text-lg">Wall Washer</p>
@@ -234,7 +277,7 @@
                     </div>
                 </div>
             </div>
-
+        
             <div class="text-black text-left m-8">
                 <h2 class="text-xl md:text-2xl font-bold">OUTDOOR LIGHTINGS</h2>
                 <a href="./outdoor.html" class="text-lg mt-2 inline-block">&rarr;</a>
@@ -242,7 +285,7 @@
             <div class="text-black grid md:grid-cols-4 gap-8 md:gap-12 px-8 md:px-24 md:py-8 lg:gap-16 lg:px-36 lg:py-8">
                 <div class="relative group">
                     <img src="imgs/products/Outdoor/Flood_Light.png" alt="FloodLight"
-                        class="w-full h-auto has--observer">
+                        class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
                     <div class="mt-4">
                         <h2 class="text-2xl md:text-3xl font-bold">FLOOD LIGHT</h2>
                         <p class="text-lg">IP65 - 30W</p>
@@ -251,7 +294,7 @@
                 </div>
                 <div class="relative group pb-8">
                     <img src="imgs/products/Outdoor/FootLight/FootLightOFL107.png" alt="Residential Projects"
-                        class="w-full h-auto has--observer">
+                        class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
                     <div class="mt-4">
                         <h2 class="text-2xl md:text-3xl font-bold">FLOOT LIGHT</h2>
                         <p class="text-lg">OFL107</p>
@@ -260,7 +303,7 @@
                 </div>
                 <div class="relative group pb-8">
                     <img src="imgs/products/Outdoor/HighBay.png" alt="Residential Projects"
-                        class="w-full h-auto has--observer">
+                        class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
                     <div class="mt-4">
                         <h2 class="text-2xl md:text-3xl font-bold">HIGH BAY</h2>
                         <p class="text-lg">High Bay</p>
@@ -269,7 +312,7 @@
                 </div>
                 <div class="relative group pb-8">
                     <img src="imgs/products/Outdoor/StreetLight-SLz.png" alt="Residential Projects"
-                        class="w-full h-auto has--observer">
+                        class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
                     <div class="mt-4">
                         <h2 class="text-2xl md:text-3xl font-bold">STREET LIGHTS</h2>
                         <p class="text-lg">SLz</p>
@@ -286,28 +329,14 @@
             </div>
             <div class="overflow-x-auto scrolling-wrapper">
                 <div class="flex flex-nowrap" id="scroll-container">
-                    <div class="logo-container"><img src="imgs/logos/1.png" alt="Client 1"></div>
-                    <div class="logo-container"><img src="imgs/logos/2.png" alt="Client 2"></div>
-                    <div class="logo-container"><img src="imgs/logos/3.png" alt="Client 3"></div>
-                    <div class="logo-container"><img src="imgs/logos/4.png" alt="Client 4"></div>
-                    <div class="logo-container"><img src="imgs/logos/5.png" alt="Client 5"></div>
+                    <div class="logo-container has--observer transition duration-500 ease-in-out transform hover:scale-105"><img src="imgs/logos/1.png" alt="Client 1"></div>
+                    <div class="logo-container has--observer transition duration-500 ease-in-out transform hover:scale-105"><img src="imgs/logos/2.png" alt="Client 2"></div>
+                    <div class="logo-container has--observer transition duration-500 ease-in-out transform hover:scale-105"><img src="imgs/logos/3.png" alt="Client 3"></div>
+                    <div class="logo-container has--observer transition duration-500 ease-in-out transform hover:scale-105"><img src="imgs/logos/4.png" alt="Client 4"></div>
+                    <div class="logo-container has--observer transition duration-500 ease-in-out transform hover:scale-105"><img src="imgs/logos/5.png" alt="Client 5"></div>
                 </div>
             </div>
         </section>
-        <script>
-            window.onload = function () {
-                var container = document.getElementById('scroll-container');
-                var scrollSpeed = 1; // Adjust this value to change the scroll speed
-
-                setInterval(function () {
-                    if (container.scrollLeft > container.scrollWidth) {
-                        container.scrollLeft = 0;
-                    } else {
-                        container.scrollLeft += scrollSpeed;
-                    }
-                }, 10);
-            }
-        </script>
 
         <section id="projects" class="px-4 py-12">
             <div class="relative text-center pb-4">

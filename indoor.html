@@ -251,7 +251,7 @@
                     <div class="mt-4">
                         <h2 class="text-2xl md:text-3xl font-bold">GAMMA</h2>
                         <p class="text-lg">COB Spot</p>
-                        <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
+                        <a href="#" class="text-lg mt-2 inline-block arrow" data-modal="modal1">&rarr;</a>
                     </div>
                 </div>
                 <div class="relative group pb-8">
@@ -295,11 +295,12 @@
                     </div>
                 </div>
                 <div class="relative group pb-8">
-                    <img src="imgs/products/Indoor/TrackCategory/JULIET.jpg" alt="Residential Projects" class="w-full h-auto has--observer">
+                    <img src="imgs/products/Indoor/TrackCategory/JULIET.jpg" alt="Residential Projects"
+                        class="w-full h-auto has--observer">
                     <div class="mt-4">
                         <h2 class="text-2xl md:text-3xl font-bold">JULIET</h2>
                         <p class="text-lg">Track Category</p>
-                        <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
+                        <a href="#" class="text-lg mt-2 inline-block arrow" data-modal="modal2">&rarr;</a>
                     </div>
                 </div>
                 <div class="relative group pb-8">
@@ -307,15 +308,16 @@
                     <div class="mt-4">
                         <h2 class="text-2xl md:text-3xl font-bold">VEGA</h2>
                         <p class="text-lg">Vega Surface</p>
-                        <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
+                        <a href="#" class="text-lg mt-2 inline-block arrow" data-modal="modal3">&rarr;</a>
                     </div>
                 </div>
+                
                 <div class="relative group pb-8">
                     <img src="imgs/products/Indoor/VegaTwinSurface/Vega twin .png" class="w-full h-auto has--observer">
                     <div class="mt-4">
                         <h2 class="text-2xl md:text-3xl font-bold">VEGA TWIN</h2>
                         <p class="text-lg">Vega Twin Surface</p>
-                        <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
+                        <a href="#" class="text-lg mt-2 inline-block arrow" data-modal="modal4">&rarr;</a>
                     </div>
                 </div>
             </div>
@@ -327,6 +329,58 @@
                 less</button>
         </div>
     </section>
+
+    <div id="modal1" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+        <div class="modal-content bg-white p-4 md:p-6 overflow-auto rounded-lg max-w-3xl max-h-3/4">
+            <img id="modal-image1" src="imgs/products/Indoor/CobSpot/GammaInfo.jpg" alt="Gamma Info"
+                class="w-full object-contain max-h-full">
+        </div>
+    </div>
+    
+    <div id="modal2" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+        <div class="modal-content bg-white p-4 md:p-6 overflow-auto rounded-lg max-w-3xl max-h-3/4">
+            <img id="modal-image2" src="imgs/products/Indoor/TrackCategory/JuletInfo.jpg" alt="Juliet Info"
+                class="w-full object-contain max-h-full">
+        </div>
+    </div>
+    
+    <div id="modal3" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+        <div class="modal-content bg-white p-4 md:p-6 overflow-auto rounded-lg max-w-3xl max-h-full">
+            <img id="modal-image3" src="imgs/products/Indoor/VegaSurface/VegaDescription.jpg" alt="Vega Info"
+                class="w-full object-contain max-h-full">
+        </div>
+    </div>
+    
+    <div id="modal4" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+        <div class="modal-content bg-white p-4 md:p-6 overflow-auto rounded-lg max-w-3xl max-h-full">
+            <img id="modal-image4" src="imgs/products/Indoor/VegaTwinSurface/VtDescription.jpg" alt="Vega Twin Info"
+                class="w-full object-contain max-h-full">
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var modals = document.querySelectorAll('.fixed');
+            var arrows = document.querySelectorAll('.arrow');
+
+            arrows.forEach((arrow) => {
+                arrow.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    var modalId = this.getAttribute('data-modal');
+                    document.getElementById(modalId).classList.remove("hidden");
+                });
+            });
+
+            window.onclick = function (event) {
+                modals.forEach((modal) => {
+                    if (event.target === modal) {
+                        modal.classList.add("hidden");
+                    }
+                });
+            };
+        });
+    </script>
+
 
     <button onclick="topFunction()" id="myBtn"
         class="fixed bottom-4 right-4 bg-black border border-white-200 text-white p-4 z-10 rounded hidden"
