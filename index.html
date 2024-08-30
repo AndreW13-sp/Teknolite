@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Teknolite</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css" rel="stylesheet">
-        <link rel="icon" type="image/png" href="imgs/TEKNOLITE LOGO.png">
 
-        <!-- <link rel="preload" as="image" href="./imgs/banner1.png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknolite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="imgs/TEKNOLITE LOGO.png">
+
+    <!-- <link rel="preload" as="image" href="./imgs/banner1.png">
         <link rel="preload" as="image" href="./imgs/banner2.png">
         <link rel="preload" as="image" href="./imgs/banner3.png">
         <link rel="preload" as="image" href="./imgs/banner4.png"> -->
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-    </head>
-    <body class="bg-white">
-        <!-- <div class="preload z-100" id="spinnerPreloader">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <!-- <div class="preload z-100" id="spinnerPreloader">
             <div class="circle"></div>
             <p class="text">Teknolite</p>
         </div> -->
 
-        <!-- <script>
+    <!-- <script>
             document.addEventListener('DOMContentLoaded', function () {
                 var images = [];
 
@@ -51,461 +53,513 @@
             });
         </script> -->
 
-        <nav class="z-50 bg-black fixed top-0 left-0 right-0">
-            <div class="container mx-auto px-4 lg:pr-0 flex justify-between items-center">
-                <a href="index.html">
-                    <img src="imgs/logo1.png" alt="Company Logo" class="h-12 md:h-20" id="mainLogo">
-                </a>
-                <button id="toggleNavBtn" class="text-white block lg:hidden focus:outline-none">
-                    <svg class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 mt-4 fill-current transition duration-300 ease-in-out"
-                        id="toggleIcon">
-                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="hamburger" />
-                        <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="close hidden" />
-                    </svg>
-                </button>
-                <ul id="navLinks" class="hidden lg:flex ml-auto">
-                    <li><a href="#inspiration" class="nav-link block text-white font-bold text-xl p-4">HOME</a></li>
-                    <li><a href="about.html" class="nav-link block text-white font-bold text-xl p-4">ABOUT</a></li>
-                    <li class="relative">
-                        <a href="#" class="nav-link block text-white font-bold text-xl p-4">PRODUCTS</a>
-                        <ul class="absolute left-0 mt-2 bg-black rounded-lg text-xl md:p-4 text-white hidden">
-                            <li><a href="indoor.html" class="block pl-4 md:pl-0 pb-4">INDOORS</a></li>
-                            <li><a href="outdoor.html" class="block pl-4 md:pl-0">OUTDOORS</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#projects" class="nav-link block text-white font-bold text-xl p-4">PROJECTS</a></li>
-                    <li><a href="#contact" class="nav-link block text-white font-bold text-xl p-4">CONTACT US</a></li>
-                </ul>
+    <nav class="z-50 bg-black fixed top-0 left-0 right-0">
+        <div class="container mx-auto px-4 lg:pr-0 flex justify-between items-center">
+            <a href="index.html">
+                <img src="imgs/logo1.png" alt="Company Logo" class="h-12 md:h-20" id="mainLogo">
+            </a>
+            <button id="toggleNavBtn" class="text-white block lg:hidden focus:outline-none">
+                <svg class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 mt-4 fill-current transition duration-300 ease-in-out"
+                    id="toggleIcon">
+                    <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="hamburger" />
+                    <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="close hidden" />
+                </svg>
+            </button>
+            <ul id="navLinks" class="hidden lg:flex ml-auto">
+                <li><a href="#inspiration" class="nav-link block text-white font-bold text-xl p-4">HOME</a></li>
+                <li><a href="about.html" class="nav-link block text-white font-bold text-xl p-4">ABOUT</a></li>
+                <li class="relative">
+                    <a href="#" class="nav-link block text-white font-bold text-xl p-4">PRODUCTS</a>
+                    <ul class="absolute left-0 mt-2 bg-black rounded-lg text-xl md:p-4 text-white hidden">
+                        <li><a href="indoor.html" class="block pl-4 md:pl-0 pb-4">INDOORS</a></li>
+                        <li><a href="outdoor.html" class="block pl-4 md:pl-0">OUTDOORS</a></li>
+                    </ul>
+                </li>
+                <li><a href="#projects" class="nav-link block text-white font-bold text-xl p-4">PROJECTS</a></li>
+                <li><a href="#blogs" class="nav-link block text-white font-bold text-xl p-4">BLOGS</a></li>
+                <li><a href="#contact" class="nav-link block text-white font-bold text-xl p-4">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleIcon = document.getElementById("toggleIcon");
+            const hamburgerPath = toggleIcon.querySelector('.hamburger');
+            const closePath = toggleIcon.querySelector('.close');
+            const toggleNavBtn = document.getElementById('toggleNavBtn');
+            const navLinks = document.getElementById('navLinks');
+            const submenus = document.querySelectorAll('.relative');
+            let open = false;
+            toggleNavBtn.addEventListener('click', function () {
+                navLinks.classList.toggle('hidden');
+                open = !open;
+                hamburgerPath.classList.toggle('hidden', open);
+                closePath.classList.toggle('hidden', !open);
+            });
+            submenus.forEach(submenu => {
+                submenu.addEventListener('click', function (event) {
+                    event.stopPropagation(); // Prevent parent link click
+                    const submenuList = this.querySelector('ul');
+                    submenuList.classList.toggle('hidden');
+                    // Add margin-bottom when submenu is visible and screen width is less than 768px (md)
+                    if (window.innerWidth < 1024) {
+                        if (!submenuList.classList.contains('hidden')) {
+                            submenu.style.marginBottom = submenuList.offsetHeight + 'px';
+                        } else {
+                            submenu.style.marginBottom = '0px';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    <section id="home" class="relative pt-12 flex justify-center items-center w-full max-h-screen">
+        <div id="carousel" class="flex overflow-x-hidden w-full relative">
+            <div class="swiper-slide w-full relative">
+                <h1
+                    class="absolute inset-0 flex items-center justify-center text-center text-white text-xs sm:text-2xl md:text-4xl xl:text-5xl font-bold animate-fade-in font-cinzel">
+                    ILLUMINATING YOUR STAY WITH TEKNOLITE EXCELLENCE
+                </h1>
+                <img src="imgs/banner1.png" alt="Image" class="w-full h-auto object-cover blur-load"
+                    data-src="imgs/banner1.png">
             </div>
-        </nav>
- 
+            <div class="swiper-slide w-full relative">
+                <h1
+                    class="absolute inset-0 flex items-center justify-center text-center text-white text-xs sm:text-2xl md:text-4xl xl:text-5xl font-bold animate-fade-in font-cinzel">
+                    LIGHTING UP LUXURY WITH TEKNOLITE
+                </h1>
+                <img src="./imgs/banner4.png" alt="Image" class="w-full h-auto object-cover blur-load"
+                    data-src="./imgs/banner3.png">
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="absolute bottom-0 left-0 right-0 flex justify-center p-4 md:mb-16">
+            <div class="bullet w-3 h-3 bg-[#757575] rounded-full mx-1 cursor-pointer hover:bg-[#ffffff]" data-index="0">
+            </div>
+            <div class="bullet w-3 h-3 bg-[#757575] rounded-full mx-1 cursor-pointer hover:bg-[#ffffff]" data-index="1">
+            </div>
+        </div>
+
+        <script>
+            let slideIndex = 0;
+            let slides = document.getElementById("carousel").children;
+            let bullets = document.querySelectorAll('.bullet');
+
+            function showSlide(n) {
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].classList.add('hidden');
+                    bullets[i].classList.remove('bg-[#757575]');
+                    bullets[i].classList.add('bg-[#ffffff]');
+                }
+                slides[n].classList.remove('hidden');
+                bullets[n].classList.remove('bg-[#ffffff]');
+                bullets[n].classList.add('bg-[#757575]');
+                slideIndex = n;
+            }
+
+            bullets.forEach((bullet) => {
+                bullet.addEventListener('click', () => {
+                    let index = parseInt(bullet.getAttribute('data-index'));
+                    showSlide(index);
+                });
+            });
+
+            showSlide(slideIndex); 
+        </script>
+    </section>
+
+    <section id="about" class="flex flex-col md:flex-row items-center justify-between py-24 px-8 md:px-16 bg-white">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+            <div class="relative pb-4">
+                <h3 class="z-10 relative text-2xl text-gray-400">About Us</h3>
+                <div class="absolute bottom-0 left-0 w-16 h-1 bg-[#05318e]"></div>
+            </div>
+            <h2 class="text-3xl font-bold text-black mb-4 pt-6">A Class of its own</h2>
+            <p class="text-gray-700 mb-4 mr-2">
+                Teknolite stands out as a leading expert in indoor and outdoor IP-rated luminaries. With in-house
+                manufacturing
+                facilities and a stringent quality assurance process involving multiple checks, we ensure the highest
+                quality
+                standards
+                in every luminary we produce. Our expertise extends to various commercial and government projects, where
+                our
+                unique
+                architectural lighting solutions enhance spaces with unparalleled brilliance.
+            </p>
+            <div class="text-6xl font-bold text-black">
+                <span id="experience-years">0</span>
+                <div class="text-lg text-gray-500">
+                    <span>Year</span><br>
+                    <span>Experience</span><br>
+                    <span>Working</span>
+                </div>
+            </div>
+        </div>
+        <div class="md:w-1/2 relative">
+            <img id="about-logo" src="imgs/logo.png" alt="Design Interior Houzez"
+                class="w-full h-full object-cover opacity-0 transition-opacity duration-1000">
+        </div>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                    const toggleIcon = document.getElementById("toggleIcon");
-                    const hamburgerPath = toggleIcon.querySelector('.hamburger');
-                    const closePath = toggleIcon.querySelector('.close');
-                    const toggleNavBtn = document.getElementById('toggleNavBtn');
-                    const navLinks = document.getElementById('navLinks');
-                    const submenus = document.querySelectorAll('.relative');
-                    let open = false;
-                    toggleNavBtn.addEventListener('click', function () {
-                        navLinks.classList.toggle('hidden');
-                        open = !open;
-                        hamburgerPath.classList.toggle('hidden', open);
-                        closePath.classList.toggle('hidden', !open);
-                    });
-                    submenus.forEach(submenu => {
-                        submenu.addEventListener('click', function (event) {
-                            event.stopPropagation(); // Prevent parent link click
-                            const submenuList = this.querySelector('ul');
-                            submenuList.classList.toggle('hidden');
-                            // Add margin-bottom when submenu is visible and screen width is less than 768px (md)
-                            if (window.innerWidth < 1024) {
-                                if (!submenuList.classList.contains('hidden')) {
-                                    submenu.style.marginBottom = submenuList.offsetHeight + 'px';
-                                } else {
-                                    submenu.style.marginBottom = '0px';
-                                }
-                            }
-                        });
-                    });
-                });
-        </script>
-
-        <section id="home" class="relative pt-12 flex justify-center items-center w-full max-h-screen">
-            <div id="carousel" class="flex overflow-x-hidden w-full relative">
-                <div class="swiper-slide w-full relative">
-                    <h1
-                        class="absolute inset-0 flex items-center justify-center text-center text-white text-xs sm:text-2xl md:text-4xl xl:text-5xl font-bold animate-fade-in font-cinzel">
-                        ILLUMINATING YOUR STAY WITH TEKNOLITE EXCELLENCE
-                    </h1>
-                    <img src="./imgs/banner1.png" alt="Image" class="w-full h-auto object-cover blur-load"
-                        data-src="./imgs/banner1.png">
-                </div>
-                <div class="swiper-slide w-full relative">
-                    <h1
-                        class="absolute inset-0 flex items-center justify-center text-center text-white text-xs sm:text-2xl md:text-4xl xl:text-5xl font-bold animate-fade-in font-cinzel">
-                        LIGHTING UP LUXURY WITH TEKNOLITE
-                    </h1>
-                    <img src="./imgs/banner4.png" alt="Image" class="w-full h-auto object-cover blur-load"
-                        data-src="./imgs/banner3.png">
-                </div>
-            </div>
-        
-            <div class="swiper-pagination"></div>
-            <div class="absolute bottom-0 left-0 right-0 flex justify-center p-4 md:mb-16" >
-                <div class="bullet w-3 h-3 bg-[#757575] rounded-full mx-1 cursor-pointer hover:bg-[#ffffff]" data-index="0">
-                </div>
-                <div class="bullet w-3 h-3 bg-[#757575] rounded-full mx-1 cursor-pointer hover:bg-[#ffffff]" data-index="1">
-                </div>
-            </div>
-        
-            <script>
-                let slideIndex = 0;
-                let slides = document.getElementById("carousel").children;
-                let bullets = document.querySelectorAll('.bullet');
-
-                function showSlide(n) {
-                    for (let i = 0; i < slides.length; i++) {
-                        slides[i].classList.add('hidden');
-                        bullets[i].classList.remove('bg-[#757575]');
-                        bullets[i].classList.add('bg-[#ffffff]');
-                    }
-                    slides[n].classList.remove('hidden');
-                    bullets[n].classList.remove('bg-[#ffffff]');
-                    bullets[n].classList.add('bg-[#757575]');
-                    slideIndex = n;
+                function animateValue(id, start, end, duration) {
+                    const obj = document.getElementById(id);
+                    let startTimestamp = null;
+                    const step = (timestamp) => {
+                        if (!startTimestamp) startTimestamp = timestamp;
+                        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                        obj.innerText = Math.floor(progress * (end - start) + start);
+                        if (progress < 1) {
+                            window.requestAnimationFrame(step);
+                        }
+                    };
+                    window.requestAnimationFrame(step);
                 }
 
-                bullets.forEach((bullet) => {
-                    bullet.addEventListener('click', () => {
-                        let index = parseInt(bullet.getAttribute('data-index'));
-                        showSlide(index);
-                    });
-                });
-
-                showSlide(slideIndex); 
-            </script>
-        </section>
-
-        <section id="about" class="flex flex-col md:flex-row items-center justify-between py-24 px-8 md:px-16 bg-white">
-            <div class="md:w-1/2 mb-8 md:mb-0">
-                <div class="relative pb-4">
-                    <h3 class="z-10 relative text-2xl text-gray-400">About Us</h3>
-                    <div class="absolute bottom-0 left-0 w-16 h-1 bg-[#05318e]"></div>
-                </div>
-                <h2 class="text-3xl font-bold text-black mb-4 pt-6">A Class of its own</h2>
-                <p class="text-gray-700 mb-4 mr-2">
-                    Teknolite stands out as a leading expert in indoor and outdoor IP-rated luminaries. With in-house manufacturing
-                    facilities and a stringent quality assurance process involving multiple checks, we ensure the highest quality
-                    standards
-                    in every luminary we produce. Our expertise extends to various commercial and government projects, where our
-                    unique
-                    architectural lighting solutions enhance spaces with unparalleled brilliance.
-                </p>
-                <div class="text-6xl font-bold text-black">
-                    <span id="experience-years">0</span>
-                    <div class="text-lg text-gray-500">
-                        <span>Year</span><br>
-                        <span>Experience</span><br>
-                        <span>Working</span>
-                    </div>
-                </div>
-            </div>
-            <div class="md:w-1/2 relative">
-                <img id="about-logo" src="imgs/logo.png" alt="Design Interior Houzez"
-                    class="w-full h-full object-cover opacity-0 transition-opacity duration-1000">
-            </div>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    function animateValue(id, start, end, duration) {
-                        const obj = document.getElementById(id);
-                        let startTimestamp = null;
-                        const step = (timestamp) => {
-                            if (!startTimestamp) startTimestamp = timestamp;
-                            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                            obj.innerText = Math.floor(progress * (end - start) + start);
-                            if (progress < 1) {
-                                window.requestAnimationFrame(step);
-                            }
-                        };
-                        window.requestAnimationFrame(step);
-                    }
-
-                    function handleIntersection(entries, observer) {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                animateValue("experience-years", 0, 43, 2000);
-                                const aboutLogo = document.getElementById("about-logo");
-                                aboutLogo.style.opacity = 1;
-                                observer.unobserve(entry.target);
-                            }
-                        });
-                    }
-                    const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
-                    const aboutSection = document.getElementById("about");
-                    observer.observe(aboutSection);
-                });
-            </script>
-
-
-
-        </section>
-
-        <section id="services" class="container mx-auto my-8">
-            <div class="text-black text-left m-4">
-                <h2 class="text-xl md:text-2xl font-bold">INDOOR LIGHTINGS</h2>
-                <a href="indoor.html" class="text-lg mt-2 inline-block">&rarr;</a>
-            </div>
-            <div class="text-black grid md:grid-cols-4 gap-8 md:gap-12 px-8 md:px-24 md:py-8 lg:gap-16 lg:px-36 lg:py-8">
-                <div class="relative group">
-                    <img src="imgs/products/Indoor/Surface Mounted/MV_SF_Black.png" alt="New Products"
-                        class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
-                    <div class="mt-4">
-                        <h2 class="text-2xl md:text-3xl font-bold">MV SF BLACK</h2>
-                        <p class="text-lg">Surface Mounted</p>
-                        <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
-                    </div>
-                </div>
-                <div class="relative group pb-8">
-                    <img src="imgs/products/Indoor/Surface Mounted/SFC.png" alt="Residential Projects"
-                        class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
-                    <div class="mt-4">
-                        <h2 class="text-2xl md:text-3xl font-bold">SFC</h2>
-                        <p class="text-lg">Surface Mounted</p>
-                        <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
-                    </div>
-                </div>
-                <div class="relative group pb-8">
-                    <img src="imgs/products/Indoor/Downlights/RLDSQ.png" alt="Residential Projects"
-                        class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
-                    <div class="mt-4">
-                        <h2 class="text-2xl md:text-3xl font-bold">RLDSQ</h2>
-                        <p class="text-lg">Downlights</p>
-                        <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
-                    </div>
-                </div>
-                <div class="relative group pb-8">
-                    <img src="imgs/products/Indoor/Wall washer/ES128.png" alt="Residential Projects"
-                        class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
-                    <div class="mt-4">
-                        <h2 class="text-2xl md:text-3xl font-bold">ES120</h2>
-                        <p class="text-lg">Wall Washer</p>
-                        <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="text-black text-left m-8">
-                <h2 class="text-xl md:text-2xl font-bold">OUTDOOR LIGHTINGS</h2>
-                <a href="./outdoor.html" class="text-lg mt-2 inline-block">&rarr;</a>
-            </div>
-            <div class="text-black grid md:grid-cols-4 gap-8 md:gap-12 px-8 md:px-24 md:py-8 lg:gap-16 lg:px-36 lg:py-8">
-                <div class="relative group">
-                    <img src="imgs/products/Outdoor/Flood_Light.png" alt="FloodLight"
-                        class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
-                    <div class="mt-4">
-                        <h2 class="text-2xl md:text-3xl font-bold">FLOOD LIGHT</h2>
-                        <p class="text-lg">IP65 - 30W</p>
-                        <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
-                    </div>
-                </div>
-                <div class="relative group pb-8">
-                    <img src="imgs/products/Outdoor/FootLight/FootLightOFL107.png" alt="Residential Projects"
-                        class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
-                    <div class="mt-4">
-                        <h2 class="text-2xl md:text-3xl font-bold">FLOOT LIGHT</h2>
-                        <p class="text-lg">OFL107</p>
-                        <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
-                    </div>
-                </div>
-                <div class="relative group pb-8">
-                    <img src="imgs/products/Outdoor/HighBay.png" alt="Residential Projects"
-                        class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
-                    <div class="mt-4">
-                        <h2 class="text-2xl md:text-3xl font-bold">HIGH BAY</h2>
-                        <p class="text-lg">High Bay</p>
-                        <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
-                    </div>
-                </div>
-                <div class="relative group pb-8">
-                    <img src="imgs/products/Outdoor/StreetLight-SLz.png" alt="Residential Projects"
-                        class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
-                    <div class="mt-4">
-                        <h2 class="text-2xl md:text-3xl font-bold">STREET LIGHTS</h2>
-                        <p class="text-lg">SLz</p>
-                        <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="clients" class="py-16 px-4 md:px-24">
-            <div class="relative text-center pb-4">
-                <h3 class="z-10 relative text-2xl md:text-4xl text-black">OUR CLIENTS</h3>
-                <div class="mx-auto mt-2 w-16 h-1 bg-[#05318e]"></div>
-            </div>
-            <div class="overflow-x-auto scrolling-wrapper">
-                <div class="flex flex-nowrap" id="scroll-container">
-                    <div class="logo-container has--observer transition duration-500 ease-in-out transform hover:scale-105"><img src="imgs/logos/1.png" alt="Client 1"></div>
-                    <div class="logo-container has--observer transition duration-500 ease-in-out transform hover:scale-105"><img src="imgs/logos/2.png" alt="Client 2"></div>
-                    <div class="logo-container has--observer transition duration-500 ease-in-out transform hover:scale-105"><img src="imgs/logos/3.png" alt="Client 3"></div>
-                    <div class="logo-container has--observer transition duration-500 ease-in-out transform hover:scale-105"><img src="imgs/logos/4.png" alt="Client 4"></div>
-                    <div class="logo-container has--observer transition duration-500 ease-in-out transform hover:scale-105"><img src="imgs/logos/5.png" alt="Client 5"></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="px-4 py-12">
-            <div class="relative text-center pb-4">
-                <h3 class="z-10 relative text-2xl md:text-4xl text-black">OUR PROJECTS</h3>
-                <div class="mx-auto mt-2 w-16 h-1 bg-[#05318e]"></div>
-            </div>
-            <div class="flex flex-wrap justify-center p-8">
-                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 img-container">
-                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="imgs/banner1.png" alt="Hyaat" class="w-full h-auto cursor-pointer">
-                        <div class="p-4">
-                            <h3 class="text-xl text-center font-semibold mb-2">Grand Hyatt Mumbai</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 img-container">
-                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="imgs/banner2.png" alt="Hirandani City" class="w-full h-auto cursor-pointer">
-                        <div class="p-4">
-                            <h3 class="text-xl text-center font-semibold mb-2">Hirandani City</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 img-container">
-                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="imgs/3.png" alt="Hometown" class="w-full h-auto cursor-pointer">
-                        <div class="p-4">
-                            <h3 class="text-xl text-center font-semibold mb-2">Hometown</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 img-container">
-                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="imgs/banner4.png" alt="Radisson Blu Karjat" class="w-full h-auto cursor-pointer">
-                        <div class="p-4">
-                            <h3 class="text-xl text-center font-semibold mb-2">Radisson Blu Karjat</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Modals -->
-        <div id="modal1" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
-            <div class="modal-content bg-white overflow-hidden rounded-lg max-w-3xl max-h-3/4 relative">
-                <!-- <span class="close absolute top-0 right-0 px-4 py-2 cursor-pointer text-xl text-white z-10">&times;</span> -->
-                <img id="modal-image1" src="" alt="Modal Image" class="w-full h-auto">
-            </div>
-        </div>
-        
-        <div id="modal2" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
-            <div class="modal-content bg-white overflow-hidden rounded-lg max-w-3xl max-h-3/4 relative">
-                <!-- <span class="close absolute top-0 right-0 px-4 py-2 cursor-pointer text-xl text-white z-10">&times;</span> -->
-                <img id="modal-image2" src="" alt="Modal Image" class="w-full h-auto">
-            </div>
-        </div>
-        
-        <div id="modal3" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
-            <div class="modal-content bg-white overflow-hidden rounded-lg max-w-3xl max-h-3/4 relative">
-                <!-- <span class="close absolute top-0 right-0 px-4 py-2 cursor-pointer text-xl text-white z-10">&times;</span> -->
-                <img id="modal-image3" src="" alt="Modal Image" class="w-full h-auto">
-            </div>
-        </div>
-        
-        <div id="modal4" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
-            <div class="modal-content bg-white overflow-hidden rounded-lg max-w-3xl max-h-3/4 relative">
-                <!-- <span class="close absolute top-0 right-0 px-4 py-2 cursor-pointer text-xl text-white z-10">&times;</span> -->
-                <img id="modal-image4" src="" alt="Modal Image" class="w-full h-auto">
-            </div>
-        </div>
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var modals = [
-                    document.getElementById('modal1'),
-                    document.getElementById('modal2'),
-                    document.getElementById('modal3'),
-                    document.getElementById('modal4')
-                ];
-
-                var images = document.querySelectorAll('.img-container img');
-                var modalImages = [
-                    document.getElementById("modal-image1"),
-                    document.getElementById("modal-image2"),
-                    document.getElementById("modal-image3"),
-                    document.getElementById("modal-image4")
-                ];
-
-                var closeButtons = document.querySelectorAll(".close");
-
-                images.forEach((image, index) => {
-                    image.addEventListener('click', function () {
-                        console.log('Image clicked: ' + index);
-                        modals[index].classList.remove("hidden");
-                        modalImages[index].src = this.src;
-                    });
-                });
-
-                window.onclick = function (event) {
-                    modals.forEach((modal, index) => {
-                        if (event.target === modal) {
-                            console.log('Window clicked outside modal: ' + index);
-                            modal.classList.add("hidden");
+                function handleIntersection(entries, observer) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateValue("experience-years", 0, 43, 2000);
+                            const aboutLogo = document.getElementById("about-logo");
+                            aboutLogo.style.opacity = 1;
+                            observer.unobserve(entry.target);
                         }
                     });
-                };
+                }
+                const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+                const aboutSection = document.getElementById("about");
+                observer.observe(aboutSection);
             });
         </script>
 
-        <footer id="contact" class="relative p-2 bg-black lg:p-8">
-            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('./imgs/footer.jpg');"></div>
-            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-            <div class="container mx-auto px-6 py-10 text-gray-700 relative z-10">
-                <div class="flex flex-wrap justify-between items-center -mx-3">
-                    <div class="w-full lg:w-1/2 px-3 mb-6 lg:mb-0">
-                        <form action="#" method="post"
-                            class="p-4 text-white rounded-lg shadow grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="text-center col-span-1 sm:col-span-2 pb-4">
-                                <h3 class="text-xl md:text-4xl text-white font-semibold mb-2">Contact Us</h3>
-                                <u class="block w-16 mx-auto mt-1 border-b-4 border-white"></u>
-                            </div>
-                            <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="text" placeholder="Name"
-                                name="name">
-                            <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="email" placeholder="Email"
-                                name="email">
-                            <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="tel"
-                                placeholder="Phone number" name="phone">
-                            <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="text"
-                                placeholder="Company Name" name="company">
-                            <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="text"
-                                placeholder="Job Title" name="job_title">
-                            <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="text" placeholder="Country"
-                                name="country">
-                            <textarea class="bg-white bg-opacity-40 p-2 mb-4 sm:col-span-2 border border-white"
-                                placeholder="Message" name="message"></textarea>
-                            <button
-                                class="sm:col-span-2 text-lg font-bold py-2 px-4 bg-white text-black w-40 hover:bg-gray-300 hover:text-black rounded mx-auto"
-                                type="submit">Send</button>
-                        </form>
-                    </div>
-                    <div class="w-full lg:w-1/2 px-3 text-white lg:pl-24 flex flex-col items-center lg:items-start">
-                        <div class="mb-4 text-center lg:text-left">
-                            <p class="mb-1 text-md md:text-xl"><span class="text-white font-bold">Address:</span> 16 WAMAN PATIL INDUSTRIAL ESTATE , CHEMBUR, 400088.</p>
-                            <p class="mb-1 text-md md:text-xl"><span class="text-white font-bold">Email:</span> sales@teknolite.in</p>
-                            <p class="text-md md:text-xl"><span class="text-white font-bold">Phone:</span> 9873436176</p>
-                        </div>
-                        <div class="flex justify-center lg:justify-start mt-4 text-xl">
-                            <a href="https://www.instagram.com" class="mr-6">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.facebook.com" class="mr-6">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.google.com" class="mr-6">
-                                <i class="fab fa-google"></i>
-                            </a>
-                            <a href="https://www.youtube.com">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
+
+
+    </section>
+
+    <section id="services" class="container mx-auto my-8">
+        <div class="text-black text-left m-4">
+            <h2 class="text-xl md:text-2xl font-bold">INDOOR LIGHTINGS</h2>
+            <a href="indoor.html" class="text-lg mt-2 inline-block">&rarr;</a>
+        </div>
+        <div class="text-black grid md:grid-cols-4 gap-8 md:gap-12 px-8 md:px-24 md:py-8 lg:gap-16 lg:px-36 lg:py-8">
+            <div class="relative group">
+                <img src="imgs/products/Indoor/Surface Mounted/MV_SF_Black.png" alt="New Products"
+                    class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
+                <div class="mt-4">
+                    <h2 class="text-2xl md:text-3xl font-bold">MV SF BLACK</h2>
+                    <p class="text-lg">Surface Mounted</p>
+                    <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
+                </div>
+            </div>
+            <div class="relative group pb-8">
+                <img src="imgs/products/Indoor/Surface Mounted/SFC.png" alt="Residential Projects"
+                    class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
+                <div class="mt-4">
+                    <h2 class="text-2xl md:text-3xl font-bold">SFC</h2>
+                    <p class="text-lg">Surface Mounted</p>
+                    <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
+                </div>
+            </div>
+            <div class="relative group pb-8">
+                <img src="imgs/products/Indoor/Downlights/RLDSQ.png" alt="Residential Projects"
+                    class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
+                <div class="mt-4">
+                    <h2 class="text-2xl md:text-3xl font-bold">RLDSQ</h2>
+                    <p class="text-lg">Downlights</p>
+                    <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
+                </div>
+            </div>
+            <div class="relative group pb-8">
+                <img src="imgs/products/Indoor/Wall washer/ES128.png" alt="Residential Projects"
+                    class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
+                <div class="mt-4">
+                    <h2 class="text-2xl md:text-3xl font-bold">ES120</h2>
+                    <p class="text-lg">Wall Washer</p>
+                    <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-black text-left m-8">
+            <h2 class="text-xl md:text-2xl font-bold">OUTDOOR LIGHTINGS</h2>
+            <a href="./outdoor.html" class="text-lg mt-2 inline-block">&rarr;</a>
+        </div>
+        <div class="text-black grid md:grid-cols-4 gap-8 md:gap-12 px-8 md:px-24 md:py-8 lg:gap-16 lg:px-36 lg:py-8">
+            <div class="relative group">
+                <img src="imgs/products/Outdoor/Flood_Light.png" alt="FloodLight"
+                    class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
+                <div class="mt-4">
+                    <h2 class="text-2xl md:text-3xl font-bold">FLOOD LIGHT</h2>
+                    <p class="text-lg">IP65 - 30W</p>
+                    <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
+                </div>
+            </div>
+            <div class="relative group pb-8">
+                <img src="imgs/products/Outdoor/FootLight/FootLightOFL107.png" alt="Residential Projects"
+                    class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
+                <div class="mt-4">
+                    <h2 class="text-2xl md:text-3xl font-bold">FLOOT LIGHT</h2>
+                    <p class="text-lg">OFL107</p>
+                    <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
+                </div>
+            </div>
+            <div class="relative group pb-8">
+                <img src="imgs/products/Outdoor/HighBay.png" alt="Residential Projects"
+                    class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
+                <div class="mt-4">
+                    <h2 class="text-2xl md:text-3xl font-bold">HIGH BAY</h2>
+                    <p class="text-lg">High Bay</p>
+                    <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
+                </div>
+            </div>
+            <div class="relative group pb-8">
+                <img src="imgs/products/Outdoor/StreetLight-SLz.png" alt="Residential Projects"
+                    class="w-full h-auto has--observer transition duration-500 ease-in-out transform hover:scale-105">
+                <div class="mt-4">
+                    <h2 class="text-2xl md:text-3xl font-bold">STREET LIGHTS</h2>
+                    <p class="text-lg">SLz</p>
+                    <a href="#" class="text-lg mt-2 inline-block">&rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients" class="py-16 px-4 md:px-24">
+        <div class="relative text-center pb-4">
+            <h3 class="z-10 relative text-2xl md:text-4xl text-black">OUR CLIENTS</h3>
+            <div class="mx-auto mt-2 w-16 h-1 bg-[#05318e]"></div>
+        </div>
+        <div class="overflow-x-auto scrolling-wrapper">
+            <div class="flex flex-nowrap" id="scroll-container">
+                <div class="logo-container has--observer transition duration-500 ease-in-out transform hover:scale-105">
+                    <img src="imgs/logos/1.png" alt="Client 1"></div>
+                <div class="logo-container has--observer transition duration-500 ease-in-out transform hover:scale-105">
+                    <img src="imgs/logos/2.png" alt="Client 2"></div>
+                <div class="logo-container has--observer transition duration-500 ease-in-out transform hover:scale-105">
+                    <img src="imgs/logos/3.png" alt="Client 3"></div>
+                <div class="logo-container has--observer transition duration-500 ease-in-out transform hover:scale-105">
+                    <img src="imgs/logos/4.png" alt="Client 4"></div>
+                <div class="logo-container has--observer transition duration-500 ease-in-out transform hover:scale-105">
+                    <img src="imgs/logos/5.png" alt="Client 5"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="px-4 py-12">
+        <div class="relative text-center pb-4">
+            <h3 class="z-10 relative text-2xl md:text-4xl text-black">OUR PROJECTS</h3>
+            <div class="mx-auto mt-2 w-16 h-1 bg-[#05318e]"></div>
+        </div>
+        <div class="flex flex-wrap justify-center p-8">
+            <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 img-container">
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="imgs/banner1.png" alt="Hyaat" class="w-full h-auto cursor-pointer">
+                    <div class="p-4">
+                        <h3 class="text-xl text-center font-semibold mb-2">Grand Hyatt Mumbai</h3>
                     </div>
                 </div>
             </div>
-        </footer>
+            <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 img-container">
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="imgs/banner2.png" alt="Hirandani City" class="w-full h-auto cursor-pointer">
+                    <div class="p-4">
+                        <h3 class="text-xl text-center font-semibold mb-2">Hirandani City</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 img-container">
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="imgs/3.png" alt="Hometown" class="w-full h-auto cursor-pointer">
+                    <div class="p-4">
+                        <h3 class="text-xl text-center font-semibold mb-2">Hometown</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 img-container">
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="imgs/banner4.png" alt="Radisson Blu Karjat" class="w-full h-auto cursor-pointer">
+                    <div class="p-4">
+                        <h3 class="text-xl text-center font-semibold mb-2">Radisson Blu Karjat</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <button onclick="topFunction()" id="myBtn"
-            class="fixed bottom-4 right-4 bg-black border border-white-200 text-white p-4 z-10 rounded hidden"
-            title="Go to top">Top</button>
+    <!-- Modals -->
+    <div id="modal1" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+        <div class="modal-content bg-white overflow-hidden rounded-lg max-w-3xl max-h-3/4 relative">
+            <!-- <span class="close absolute top-0 right-0 px-4 py-2 cursor-pointer text-xl text-white z-10">&times;</span> -->
+            <img id="modal-image1" src="" alt="Modal Image" class="w-full h-auto">
+        </div>
+    </div>
 
-        <script src="main.js"></script>
-    </body>
+    <div id="modal2" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+        <div class="modal-content bg-white overflow-hidden rounded-lg max-w-3xl max-h-3/4 relative">
+            <!-- <span class="close absolute top-0 right-0 px-4 py-2 cursor-pointer text-xl text-white z-10">&times;</span> -->
+            <img id="modal-image2" src="" alt="Modal Image" class="w-full h-auto">
+        </div>
+    </div>
+
+    <div id="modal3" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+        <div class="modal-content bg-white overflow-hidden rounded-lg max-w-3xl max-h-3/4 relative">
+            <!-- <span class="close absolute top-0 right-0 px-4 py-2 cursor-pointer text-xl text-white z-10">&times;</span> -->
+            <img id="modal-image3" src="" alt="Modal Image" class="w-full h-auto">
+        </div>
+    </div>
+
+    <div id="modal4" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+        <div class="modal-content bg-white overflow-hidden rounded-lg max-w-3xl max-h-3/4 relative">
+            <!-- <span class="close absolute top-0 right-0 px-4 py-2 cursor-pointer text-xl text-white z-10">&times;</span> -->
+            <img id="modal-image4" src="" alt="Modal Image" class="w-full h-auto">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var modals = [
+                document.getElementById('modal1'),
+                document.getElementById('modal2'),
+                document.getElementById('modal3'),
+                document.getElementById('modal4')
+            ];
+
+            var images = document.querySelectorAll('.img-container img');
+            var modalImages = [
+                document.getElementById("modal-image1"),
+                document.getElementById("modal-image2"),
+                document.getElementById("modal-image3"),
+                document.getElementById("modal-image4")
+            ];
+
+            var closeButtons = document.querySelectorAll(".close");
+
+            images.forEach((image, index) => {
+                image.addEventListener('click', function () {
+                    console.log('Image clicked: ' + index);
+                    modals[index].classList.remove("hidden");
+                    modalImages[index].src = this.src;
+                });
+            });
+
+            window.onclick = function (event) {
+                modals.forEach((modal, index) => {
+                    if (event.target === modal) {
+                        console.log('Window clicked outside modal: ' + index);
+                        modal.classList.add("hidden");
+                    }
+                });
+            };
+        });
+    </script>
+
+    <section id="blogs" class="px-4 py-4">
+        <div class="relative text-center pb-4">
+            <h3 class="z-10 relative text-2xl md:text-4xl text-black">OUR BLOGS</h3>
+            <div class="mx-auto mt-2 w-16 h-1 bg-[#05318e]"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto md:py-12">
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                <div class="flex h-full">
+                    <img src="imgs/blog1.png" alt="Understanding LED Color Temperature" class="w-1/3 h-auto object-cover">
+                    <div class="p-4 w-2/3 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Understanding LED Color Temperature</h3>
+                            <p class="text-gray-700 mb-4">Learn how different LED color temperatures can impact the mood and
+                                functionality of your space...</p>
+                        </div>
+                        <a href="color-temperature.html" class="text-blue-500 hover:text-blue-700 mt-auto">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                <div class="flex h-full">
+                    <img src="imgs/blog2.png" alt="Choosing Between Concealed and Surface-Mounted Lights"
+                        class="w-1/3 h-auto object-cover">
+                    <div class="p-4 w-2/3 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Choosing Between Concealed and Surface-Mounted Lights
+                            </h3>
+                            <p class="text-gray-700 mb-4">Discover the benefits of concealed and surface-mounted lights to
+                                find the ideal choice for your space...</p>
+                        </div>
+                        <a href="concealed-vs-surface-lights.html" class="text-blue-500 hover:text-blue-700 mt-auto">Read
+                            More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="contact" class="relative p-2 bg-black lg:p-8">
+        <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('./imgs/footer.jpg');">
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="container mx-auto px-6 py-10 text-gray-700 relative z-10">
+            <div class="flex flex-wrap justify-between items-center -mx-3">
+                <div class="w-full lg:w-1/2 px-3 mb-6 lg:mb-0">
+                    <form action="#" method="post"
+                        class="p-4 text-white rounded-lg shadow grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="text-center col-span-1 sm:col-span-2 pb-4">
+                            <h3 class="text-xl md:text-4xl text-white font-semibold mb-2">Contact Us</h3>
+                            <u class="block w-16 mx-auto mt-1 border-b-4 border-white"></u>
+                        </div>
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="text"
+                            placeholder="Name" name="name">
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="email"
+                            placeholder="Email" name="email">
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="tel"
+                            placeholder="Phone number" name="phone">
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="text"
+                            placeholder="Company Name" name="company">
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="text"
+                            placeholder="Job Title" name="job_title">
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="text"
+                            placeholder="Country" name="country">
+                        <textarea class="bg-white bg-opacity-40 p-2 mb-4 sm:col-span-2 border border-white"
+                            placeholder="Message" name="message"></textarea>
+                        <button
+                            class="sm:col-span-2 text-lg font-bold py-2 px-4 bg-white text-black w-40 hover:bg-gray-300 hover:text-black rounded mx-auto"
+                            type="submit">Send</button>
+                    </form>
+                </div>
+                <div class="w-full lg:w-1/2 px-3 text-white lg:pl-24 flex flex-col items-center lg:items-start">
+                    <div class="mb-4 text-center lg:text-left">
+                        <p class="mb-1 text-md md:text-xl"><span class="text-white font-bold">Address:</span> 16 WAMAN
+                            PATIL INDUSTRIAL ESTATE , CHEMBUR, 400088.</p>
+                        <p class="mb-1 text-md md:text-xl"><span class="text-white font-bold">Email:</span>
+                            sales@teknolite.in</p>
+                        <p class="text-md md:text-xl"><span class="text-white font-bold">Phone:</span> 9873436176</p>
+                    </div>
+                    <div class="flex justify-center lg:justify-start mt-4 text-xl">
+                        <a href="https://www.instagram.com" class="mr-6">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com" class="mr-6">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.google.com" class="mr-6">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="https://www.youtube.com">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn"
+        class="fixed bottom-4 right-4 bg-black border border-white-200 text-white p-4 z-10 rounded hidden"
+        title="Go to top">Top</button>
+
+    <script src="main.js"></script>
+</body>
+
 </html>

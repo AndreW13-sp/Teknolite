@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknolite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="imgs/TEKNOLITE LOGO.png">
+
+    <!-- <link rel="preload" as="image" href="./imgs/banner1.png">
+        <link rel="preload" as="image" href="./imgs/banner2.png">
+        <link rel="preload" as="image" href="./imgs/banner3.png">
+        <link rel="preload" as="image" href="./imgs/banner4.png"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <!-- <div class="preload z-100" id="spinnerPreloader">
+            <div class="circle"></div>
+            <p class="text">Teknolite</p>
+        </div> -->
+
+    <!-- <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var images = [];
+
+                function preloadImages(urls) {
+                    urls.forEach(function (url) {
+                        var img = new Image();
+                        img.src = url;
+                        images.push(img);
+                        img.onload = imageLoaded;
+                    });
+                }
+
+                function imageLoaded() {
+                    if (images.every(function (img) { return img.complete; })) {
+                        document.getElementById('spinnerPreloader').classList.add('loaded');
+
+                        setTimeout(function () {
+                            document.getElementById('spinnerPreloader').classList.add('hidden');
+                            document.getElementById('content').classList.remove('hidden');
+                            document.body.classList.remove('overflow-hidden');
+                        }, 250);
+                    }
+                }
+
+                var imageUrls = ['./imgs/banner1.png', './imgs/banner2.png', './imgs/banner3.png', 'imgs/3.png'];
+                preloadImages(imageUrls);
+            });
+        </script> -->
+
+    <nav class="z-50 bg-black fixed top-0 left-0 right-0">
+        <div class="container mx-auto px-4 lg:pr-0 flex justify-between items-center">
+            <a href="index.html">
+                <img src="imgs/logo1.png" alt="Company Logo" class="h-12 md:h-20" id="mainLogo">
+            </a>
+            <button id="toggleNavBtn" class="text-white block lg:hidden focus:outline-none">
+                <svg class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 mt-4 fill-current transition duration-300 ease-in-out"
+                    id="toggleIcon">
+                    <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="hamburger" />
+                    <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="close hidden" />
+                </svg>
+            </button>
+            <ul id="navLinks" class="hidden lg:flex ml-auto">
+                <li><a href="index.html" class="nav-link block text-white font-bold text-xl p-4">HOME</a></li>
+                <li><a href="about.html" class="nav-link block text-white font-bold text-xl p-4">ABOUT</a></li>
+                <li class="relative">
+                    <a href="#" class="nav-link block text-white font-bold text-xl p-4">PRODUCTS</a>
+                    <ul class="absolute left-0 mt-2 bg-black rounded-lg text-xl md:p-4 text-white hidden">
+                        <li><a href="indoor.html" class="block pl-4 md:pl-0 pb-4">INDOORS</a></li>
+                        <li><a href="outdoor.html" class="block pl-4 md:pl-0">OUTDOORS</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html" class="nav-link block text-white font-bold text-xl p-4">PROJECTS</a></li>
+                <li><a href="#" class="nav-link block text-white font-bold text-xl p-4">BLOGS</a></li>
+                <li><a href="#contact" class="nav-link block text-white font-bold text-xl p-4">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleIcon = document.getElementById("toggleIcon");
+            const hamburgerPath = toggleIcon.querySelector('.hamburger');
+            const closePath = toggleIcon.querySelector('.close');
+            const toggleNavBtn = document.getElementById('toggleNavBtn');
+            const navLinks = document.getElementById('navLinks');
+            const submenus = document.querySelectorAll('.relative');
+            let open = false;
+            toggleNavBtn.addEventListener('click', function () {
+                navLinks.classList.toggle('hidden');
+                open = !open;
+                hamburgerPath.classList.toggle('hidden', open);
+                closePath.classList.toggle('hidden', !open);
+            });
+            submenus.forEach(submenu => {
+                submenu.addEventListener('click', function (event) {
+                    event.stopPropagation(); // Prevent parent link click
+                    const submenuList = this.querySelector('ul');
+                    submenuList.classList.toggle('hidden');
+                    // Add margin-bottom when submenu is visible and screen width is less than 768px (md)
+                    if (window.innerWidth < 1024) {
+                        if (!submenuList.classList.contains('hidden')) {
+                            submenu.style.marginBottom = submenuList.offsetHeight + 'px';
+                        } else {
+                            submenu.style.marginBottom = '0px';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    <main class="md:pt-24 pt-12 bg-gray-200">
+        <section class="container mx-auto px-4 py-8 lg:py-12">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="imgs/blogs/BLOG1.png" alt="Blog Image" class="w-full md:h-[22.5rem] object-cover mb-6 rounded-t-lg">
+                <div class="p-6">
+                    <h1 class="text-4xl font-extrabold text-gray-900 mb-4">Understanding LED Color Temperature</h1>
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Choosing the Right Light for Your Space</h2>
+                    <p class="text-gray-700 mb-8 leading-relaxed">LED lights have become a go-to choice for both residential
+                        and commercial spaces due to their energy efficiency, long lifespan, and versatility. One crucial
+                        factor to consider when selecting LED lights is color temperature—a detail that can significantly
+                        impact the mood and functionality of your space.</p>
+    
+                    <div class="flex flex-col md:flex-row md:space-x-8 mb-8">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Exploring Different Color Temperatures:
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="bg-gray-50 p-4 rounded-lg shadow-md">
+                                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Warm White (2,000K - 3,000K):</h4>
+                                    <p class="text-gray-600">Appearance: Soft, yellowish light.<br>Ideal For: Living rooms,
+                                        bedrooms, and dining areas where a cozy, inviting atmosphere is desired. This
+                                        temperature mimics the familiar glow of incandescent bulbs, making it perfect for
+                                        relaxation.</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg shadow-md">
+                                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Neutral White (3,100K - 4,500K):
+                                    </h4>
+                                    <p class="text-gray-600">Appearance: Pure white light with a balanced tone, free from
+                                        noticeable yellow or blue tint.<br>Ideal For: Offices, kitchens, and bathrooms,
+                                        where a clear, neutral light is essential for detailed tasks and maintaining focus.
+                                        It strikes a balance between warmth and coolness.</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg shadow-md">
+                                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Cool White (4,600K - 6,500K):</h4>
+                                    <p class="text-gray-600">Appearance: Crisp, bluish-white light.<br>Ideal For:
+                                        Workspaces, hospitals, and industrial environments where visibility and
+                                        concentration are crucial. This bright, focused light is excellent for task lighting
+                                        and areas requiring precision.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1 mt-8 md:mt-0">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Choosing the Right Color Temperature:</h3>
+                            <p class="text-gray-700 mb-6 leading-relaxed">Your choice of color temperature should align with
+                                the function and ambiance of the space:</p>
+                            <ul class="list-disc pl-5 mb-8 text-gray-700 space-y-2">
+                                <li><strong class="text-gray-900">Warm White:</strong> Ideal for creating a relaxing,
+                                    comfortable environment in areas like living rooms, bedrooms, and dining rooms.</li>
+                                <li><strong class="text-gray-900">Neutral White:</strong> Best suited for spaces that
+                                    require clear, neutral lighting, such as offices, kitchens, and bathrooms.</li>
+                                <li><strong class="text-gray-900">Cool White:</strong> Perfect for work environments,
+                                    workshops, or outdoor settings where bright, sharp light is necessary.</li>
+                            </ul>
+                            <p class="text-gray-700 leading-relaxed">By understanding color temperature, you can tailor the
+                                lighting in your space to enhance its function and aesthetic, creating the perfect
+                                atmosphere for any setting.</p>
+                        </div>
+                    </div>
+    
+                    <div class="md:hidden mt-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">What is Color Temperature?</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">Color temperature refers to the hue of light emitted
+                            by a source, measured in Kelvin (K). It indicates whether the light appears warm, cool, or
+                            somewhere in between. Typically, color temperature ranges from 2,000K to 6,500K in most lighting
+                            applications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="relative p-2 bg-black lg:p-8">
+        <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('./imgs/footer.jpg');">
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="container mx-auto px-6 py-10 text-gray-700 relative z-10">
+            <div class="flex flex-wrap justify-between items-center -mx-3">
+                <div class="w-full lg:w-1/2 px-3 mb-6 lg:mb-0">
+                    <form action="#" method="post"
+                        class="p-4 text-white rounded-lg shadow grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="text-center col-span-1 sm:col-span-2 pb-4">
+                            <h3 class="text-xl md:text-4xl text-white font-semibold mb-2">Contact Us</h3>
+                            <u class="block w-16 mx-auto mt-1 border-b-4 border-white"></u>
+                        </div>
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="text" placeholder="Name"
+                            name="name">
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="email" placeholder="Email"
+                            name="email">
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="tel"
+                            placeholder="Phone number" name="phone">
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="text"
+                            placeholder="Company Name" name="company">
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="text"
+                            placeholder="Job Title" name="job_title">
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="text" placeholder="Country"
+                            name="country">
+                        <textarea class="bg-white bg-opacity-40 p-2 mb-4 sm:col-span-2 border border-white"
+                            placeholder="Message" name="message"></textarea>
+                        <button
+                            class="sm:col-span-2 text-lg font-bold py-2 px-4 bg-white text-black w-40 hover:bg-gray-300 hover:text-black rounded mx-auto"
+                            type="submit">Send</button>
+                    </form>
+                </div>
+                <div class="w-full lg:w-1/2 px-3 text-white lg:pl-24 flex flex-col items-center lg:items-start">
+                    <div class="mb-4 text-center lg:text-left">
+                        <p class="mb-1 text-md md:text-xl"><span class="text-white font-bold">Address:</span> 16 WAMAN
+                            PATIL INDUSTRIAL ESTATE , CHEMBUR, 400088.</p>
+                        <p class="mb-1 text-md md:text-xl"><span class="text-white font-bold">Email:</span>
+                            sales@teknolite.in</p>
+                        <p class="text-md md:text-xl"><span class="text-white font-bold">Phone:</span> 9873436176</p>
+                    </div>
+                    <div class="flex justify-center lg:justify-start mt-4 text-xl">
+                        <a href="https://www.instagram.com" class="mr-6">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com" class="mr-6">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.google.com" class="mr-6">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="https://www.youtube.com">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <button onclick="topFunction()" id="myBtn"
+        class="fixed bottom-4 right-4 bg-black border border-white-200 text-white p-4 z-10 rounded hidden"
+        title="Go to top">Top</button>
+    
+    <script src="main.js"></script>
+</body>
+    
+</html>

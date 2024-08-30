@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknolite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="imgs/TEKNOLITE LOGO.png">
+
+    <!-- <link rel="preload" as="image" href="./imgs/banner1.png">
+        <link rel="preload" as="image" href="./imgs/banner2.png">
+        <link rel="preload" as="image" href="./imgs/banner3.png">
+        <link rel="preload" as="image" href="./imgs/banner4.png"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <!-- <div class="preload z-100" id="spinnerPreloader">
+            <div class="circle"></div>
+            <p class="text">Teknolite</p>
+        </div> -->
+
+    <!-- <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var images = [];
+
+                function preloadImages(urls) {
+                    urls.forEach(function (url) {
+                        var img = new Image();
+                        img.src = url;
+                        images.push(img);
+                        img.onload = imageLoaded;
+                    });
+                }
+
+                function imageLoaded() {
+                    if (images.every(function (img) { return img.complete; })) {
+                        document.getElementById('spinnerPreloader').classList.add('loaded');
+
+                        setTimeout(function () {
+                            document.getElementById('spinnerPreloader').classList.add('hidden');
+                            document.getElementById('content').classList.remove('hidden');
+                            document.body.classList.remove('overflow-hidden');
+                        }, 250);
+                    }
+                }
+
+                var imageUrls = ['./imgs/banner1.png', './imgs/banner2.png', './imgs/banner3.png', 'imgs/3.png'];
+                preloadImages(imageUrls);
+            });
+        </script> -->
+
+    <nav class="z-50 bg-black fixed top-0 left-0 right-0">
+        <div class="container mx-auto px-4 lg:pr-0 flex justify-between items-center">
+            <a href="index.html">
+                <img src="imgs/logo1.png" alt="Company Logo" class="h-12 md:h-20" id="mainLogo">
+            </a>
+            <button id="toggleNavBtn" class="text-white block lg:hidden focus:outline-none">
+                <svg class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 mt-4 fill-current transition duration-300 ease-in-out"
+                    id="toggleIcon">
+                    <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="hamburger" />
+                    <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="close hidden" />
+                </svg>
+            </button>
+            <ul id="navLinks" class="hidden lg:flex ml-auto">
+                <li><a href="index.html" class="nav-link block text-white font-bold text-xl p-4">HOME</a></li>
+                <li><a href="about.html" class="nav-link block text-white font-bold text-xl p-4">ABOUT</a></li>
+                <li class="relative">
+                    <a href="#" class="nav-link block text-white font-bold text-xl p-4">PRODUCTS</a>
+                    <ul class="absolute left-0 mt-2 bg-black rounded-lg text-xl md:p-4 text-white hidden">
+                        <li><a href="indoor.html" class="block pl-4 md:pl-0 pb-4">INDOORS</a></li>
+                        <li><a href="outdoor.html" class="block pl-4 md:pl-0">OUTDOORS</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html" class="nav-link block text-white font-bold text-xl p-4">PROJECTS</a></li>
+                <li><a href="#" class="nav-link block text-white font-bold text-xl p-4">BLOGS</a></li>
+                <li><a href="#contact" class="nav-link block text-white font-bold text-xl p-4">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleIcon = document.getElementById("toggleIcon");
+            const hamburgerPath = toggleIcon.querySelector('.hamburger');
+            const closePath = toggleIcon.querySelector('.close');
+            const toggleNavBtn = document.getElementById('toggleNavBtn');
+            const navLinks = document.getElementById('navLinks');
+            const submenus = document.querySelectorAll('.relative');
+            let open = false;
+            toggleNavBtn.addEventListener('click', function () {
+                navLinks.classList.toggle('hidden');
+                open = !open;
+                hamburgerPath.classList.toggle('hidden', open);
+                closePath.classList.toggle('hidden', !open);
+            });
+            submenus.forEach(submenu => {
+                submenu.addEventListener('click', function (event) {
+                    event.stopPropagation(); // Prevent parent link click
+                    const submenuList = this.querySelector('ul');
+                    submenuList.classList.toggle('hidden');
+                    // Add margin-bottom when submenu is visible and screen width is less than 768px (md)
+                    if (window.innerWidth < 1024) {
+                        if (!submenuList.classList.contains('hidden')) {
+                            submenu.style.marginBottom = submenuList.offsetHeight + 'px';
+                        } else {
+                            submenu.style.marginBottom = '0px';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    <main class="md:pt-24 pt-12 bg-gray-100">
+        <section class="container mx-auto px-4 py-8 lg:py-12">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="imgs/blogs/BLOG2.png" alt="Blog Image" class="w-full h-[22.5rem] object-cover mb-6 rounded-t-lg">
+    
+                <div class="p-6">
+                    <h1 class="text-4xl font-extrabold text-gray-900 mb-4">Choosing Between Concealed and Surface-Mounted
+                        Lights</h1>
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">A Comprehensive Guide</h2>
+    
+                    <p class="text-gray-700 mb-8 leading-relaxed">When planning the lighting for any space, one of the most
+                        crucial decisions is whether to opt for concealed lights or surface-mounted lights. Both types of
+                        lighting fixtures bring unique aesthetic and functional benefits, so understanding their differences
+                        is key to creating a well-lit, visually appealing environment.</p>
+    
+                    <div class="flex flex-col md:flex-row md:space-x-8 mb-8">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">What Are Concealed Lights?</h3>
+                            <p class="text-gray-700 mb-6 leading-relaxed">Concealed lights are fixtures that are seamlessly
+                                integrated into the architecture of a space, often hidden within ceilings, walls, or
+                                cabinets. Unlike traditional lights, where the fixture itself is visible, concealed lights
+                                offer a soft, indirect glow that enhances the ambiance without drawing attention to the
+                                light source.</p>
+    
+                            <div class="bg-gray-50 p-4 rounded-lg shadow-md mb-6">
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">Key Features of Concealed Lights:</h4>
+                                <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                    <li><strong class="text-gray-900">Aesthetic Appeal:</strong> Ideal for a minimalist,
+                                        clean look.</li>
+                                    <li><strong class="text-gray-900">Ambient Lighting:</strong> Provides soft, welcoming
+                                        illumination.</li>
+                                    <li><strong class="text-gray-900">Customization:</strong> Versatile for highlighting
+                                        architectural features.</li>
+                                    <li><strong class="text-gray-900">Applications:</strong> Used in living rooms, bedrooms,
+                                        and commercial spaces.</li>
+                                    <li><strong class="text-gray-900">Installation:</strong> More complex, involving a
+                                        plaster of Paris (POP) finish.</li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="flex-1 mt-8 md:mt-0">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">What Are Surface-Mounted Lights?</h3>
+                            <p class="text-gray-700 mb-6 leading-relaxed">Surface-mounted lights are fixtures that are
+                                mounted directly onto a surface like a ceiling or wall. Unlike concealed lights, the entire
+                                fixture is visible, making it a significant design element within the room.</p>
+    
+                            <div class="bg-gray-50 p-4 rounded-lg shadow-md mb-6">
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">Key Features of Surface-Mounted Lights:
+                                </h4>
+                                <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                    <li><strong class="text-gray-900">Versatility:</strong> Available in various styles and
+                                        sizes.</li>
+                                    <li><strong class="text-gray-900">Direct Lighting:</strong> Ideal for task lighting in
+                                        functional areas.</li>
+                                    <li><strong class="text-gray-900">Ease of Installation:</strong> Simpler and
+                                        cost-effective compared to concealed lights.</li>
+                                    <li><strong class="text-gray-900">Applications:</strong> Suitable for hallways,
+                                        entryways, kitchens, and bathrooms.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Key Differences Between Concealed and
+                        Surface-Mounted Lights</h3>
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-md mb-8">
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">Aesthetics:</h4>
+                                <p class="text-gray-600"><strong class="text-gray-900">Concealed Lights:</strong> Create a
+                                    modern, sleek look by hiding the light source. <strong
+                                        class="text-gray-900">Surface-Mounted Lights:</strong> Serve as visible design
+                                    elements adding character and style.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">Light Quality:</h4>
+                                <p class="text-gray-600"><strong class="text-gray-900">Concealed Lights:</strong> Provide
+                                    diffuse, ambient lighting. <strong class="text-gray-900">Surface-Mounted
+                                        Lights:</strong> Offer more focused, direct light.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">Installation:</h4>
+                                <p class="text-gray-600"><strong class="text-gray-900">Concealed Lights:</strong> Require
+                                    complex installation with ceiling or wall modifications. <strong
+                                        class="text-gray-900">Surface-Mounted Lights:</strong> Easier installation, mounted
+                                    directly on surfaces.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">Maintenance:</h4>
+                                <p class="text-gray-600"><strong class="text-gray-900">Concealed Lights:</strong> May be
+                                    harder to access for repairs. <strong class="text-gray-900">Surface-Mounted
+                                        Lights:</strong> Generally easier to maintain and replace.</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Making the Right Choice for Your Space</h3>
+                    <p class="text-gray-700 leading-relaxed">Ultimately, the decision between concealed and surface-mounted
+                        lights comes down to your design vision, the functional needs of the space, and the specific
+                        requirements of the installation process. Concealed lights offer a modern, understated look with
+                        ambient lighting, while surface-mounted lights provide direct lighting and can enhance the room's
+                        design. Consider the complexity of installation and the impact on the space's aesthetics to make an
+                        informed choice.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer id="contact" class="relative p-2 bg-black lg:p-8">
+        <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('./imgs/footer.jpg');">
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="container mx-auto px-6 py-10 text-gray-700 relative z-10">
+            <div class="flex flex-wrap justify-between items-center -mx-3">
+                <div class="w-full lg:w-1/2 px-3 mb-6 lg:mb-0">
+                    <form action="#" method="post"
+                        class="p-4 text-white rounded-lg shadow grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="text-center col-span-1 sm:col-span-2 pb-4">
+                            <h3 class="text-xl md:text-4xl text-white font-semibold mb-2">Contact Us</h3>
+                            <u class="block w-16 mx-auto mt-1 border-b-4 border-white"></u>
+                        </div>
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="text"
+                            placeholder="Name" name="name">
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="email"
+                            placeholder="Email" name="email">
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="tel"
+                            placeholder="Phone number" name="phone">
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="text"
+                            placeholder="Company Name" name="company">
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="text"
+                            placeholder="Job Title" name="job_title">
+                        <input class="bg-white bg-opacity-40 p-2 mb-4 border border-white" type="text"
+                            placeholder="Country" name="country">
+                        <textarea class="bg-white bg-opacity-40 p-2 mb-4 sm:col-span-2 border border-white"
+                            placeholder="Message" name="message"></textarea>
+                        <button
+                            class="sm:col-span-2 text-lg font-bold py-2 px-4 bg-white text-black w-40 hover:bg-gray-300 hover:text-black rounded mx-auto"
+                            type="submit">Send</button>
+                    </form>
+                </div>
+                <div class="w-full lg:w-1/2 px-3 text-white lg:pl-24 flex flex-col items-center lg:items-start">
+                    <div class="mb-4 text-center lg:text-left">
+                        <p class="mb-1 text-md md:text-xl"><span class="text-white font-bold">Address:</span> 16 WAMAN
+                            PATIL INDUSTRIAL ESTATE , CHEMBUR, 400088.</p>
+                        <p class="mb-1 text-md md:text-xl"><span class="text-white font-bold">Email:</span>
+                            sales@teknolite.in</p>
+                        <p class="text-md md:text-xl"><span class="text-white font-bold">Phone:</span> 9873436176</p>
+                    </div>
+                    <div class="flex justify-center lg:justify-start mt-4 text-xl">
+                        <a href="https://www.instagram.com" class="mr-6">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com" class="mr-6">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.google.com" class="mr-6">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="https://www.youtube.com">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn"
+        class="fixed bottom-4 right-4 bg-black border border-white-200 text-white p-4 z-10 rounded hidden"
+        title="Go to top">Top</button>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
